@@ -122,6 +122,14 @@ class Hotel
      */
     public $type = null;
 
+	/**
+	 * Информация для гостей, обязательно для передачи
+	 * Type: tns:InformationForGuest
+	 *
+	 * @var \Bronevik\HotelsConnector\Element\InformationForGuest
+	 */
+    public $informationForGuest;
+
     /**
      * 
      * @param string $id 
@@ -436,5 +444,21 @@ class Hotel
     {
         return $this->type;
     }
+
+	/**
+	 * @return \Bronevik\HotelsConnector\Element\InformationForGuest
+	 */
+	public function getInformationForGuest()
+	{
+		return $this->informationForGuest;
+	}
+
+	/**
+	 * @param \Bronevik\HotelsConnector\Element\InformationForGuest $informationForGuest
+	 */
+	public function setInformationForGuest($informationForGuest)
+	{
+		$this->informationForGuest = $informationForGuest;
+	}
 }
 
