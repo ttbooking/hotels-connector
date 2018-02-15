@@ -142,6 +142,8 @@ class HotelsConnector
                     'ServiceAccommodation'                   => \Bronevik\HotelsConnector\Element\ServiceAccommodation::class,
                     'UpdateOrderRequest'                     => \Bronevik\HotelsConnector\Element\UpdateOrderRequest::class,
                     'UpdateOrderResponse'                    => \Bronevik\HotelsConnector\Element\UpdateOrderResponse::class,
+					//update 2.0.1
+					'InformationForGuest'					 => 'Bronevik\HotelsConnector\Element\InformationForGuest'
                 ],
             ]);
     }

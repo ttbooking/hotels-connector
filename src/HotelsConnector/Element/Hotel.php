@@ -125,13 +125,13 @@ class Hotel
     /**
      * Важная информация для гостей
      * Type: tns:InformationForGuest
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\InformationForGuest
      */
     public $informationForGuest = null;
 
     /**
-     * 
+     *
      */
     public function __construct()
     {
@@ -454,8 +454,8 @@ class Hotel
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\InformationForGuest $informationForGuest 
+     *
+     * @param \Bronevik\HotelsConnector\Element\InformationForGuest $informationForGuest
      */
     public function setInformationForGuest($informationForGuest)
     {
@@ -463,7 +463,7 @@ class Hotel
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\InformationForGuest
      */
     public function getInformationForGuest()

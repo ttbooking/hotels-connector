@@ -5,14 +5,14 @@ class InformationForGuest
 {
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $comment = null;
 
     /**
-     * 
-     * @param string $comment 
+     *
+     * @param string $comment
      */
     public function setComment($comment)
     {
@@ -20,7 +20,7 @@ class InformationForGuest
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getComment()
