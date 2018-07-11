@@ -134,6 +134,16 @@ class OrderServiceAccommodation extends OrderService
     public $meals = [];
 
     /**
+     * @var \Bronevik\HotelsConnector\Element\ServiceExtraField[] $extraField
+     */
+    public $extraField = [];
+
+    /**
+     * @var \Bronevik\HotelsConnector\Element\OfferPolicy[] $offerPolicies
+     */
+    public $offerPolicies = [];
+
+    /**
      * 
      */
     public function __construct()
@@ -481,6 +491,42 @@ class OrderServiceAccommodation extends OrderService
     public function addMeals($meals)
     {
         $this->meals[] = $meals;
+    }
+
+    /**
+     * @return ServiceExtraField[]
+     */
+    public function getExtraField()
+    {
+        return $this->extraField;
+    }
+
+    /**
+     * @param ServiceExtraField[] $extraField
+     * @return OrderServiceAccommodation
+     */
+    public function setExtraField($extraField)
+    {
+        $this->extraField = $extraField;
+        return $this;
+    }
+
+    /**
+     * @return OfferPolicy[]
+     */
+    public function getOfferPolicies()
+    {
+        return $this->offerPolicies;
+    }
+
+    /**
+     * @param OfferPolicy[] $offerPolicies
+     * @return OrderServiceAccommodation
+     */
+    public function setOfferPolicies($offerPolicies)
+    {
+        $this->offerPolicies = $offerPolicies;
+        return $this;
     }
 }
 

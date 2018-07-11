@@ -25,6 +25,11 @@ class ServiceAccommodation extends Service
     public $comment = null;
 
     /**
+     * @var float $sellingPrice
+     */
+    public $sellingPrice = null;
+
+    /**
      * Type: xsd:int
      * 
      * @var int[]
@@ -101,6 +106,24 @@ class ServiceAccommodation extends Service
     public function hasMeals()
     {
         return count($this->meals) > 0;
+    }
+
+    /**
+     * @return float
+     */
+    public function getSellingPrice()
+    {
+        return $this->sellingPrice;
+    }
+
+    /**
+     * @param float $sellingPrice
+     * @return ServiceAccommodation
+     */
+    public function setSellingPrice($sellingPrice)
+    {
+        $this->sellingPrice = $sellingPrice;
+        return $this;
     }
 
     /**

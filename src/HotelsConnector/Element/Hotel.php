@@ -18,6 +18,21 @@ class Hotel
     public $cityId = null;
 
     /**
+     * @var string $cityName
+     */
+    public $cityName = null;
+
+    /**
+     * @var string $countryId
+     */
+    public $countryId = null;
+
+    /**
+     * @var string $countryName
+     */
+    public $countryName = null;
+
+    /**
      * Type: xsd:string
      * 
      * @var string
@@ -81,6 +96,11 @@ class Hotel
      * @var boolean
      */
     public $vatApplicable = null;
+
+    /**
+     * @var boolean $hasTaxes
+     */
+    public $hasTaxes = false;
 
     /**
      * Фотографии отеля

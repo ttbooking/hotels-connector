@@ -49,6 +49,11 @@ class HotelOffer
     public $price = null;
 
     /**
+     * @var \Bronevik\HotelsConnector\Element\Tax[] $taxes
+     */
+    public $taxes = [];
+
+    /**
      * Type: tns:Currency
      * 
      * @var string
@@ -75,6 +80,20 @@ class HotelOffer
      * @var int
      */
     public $freeRooms = null;
+
+    /**
+     * Type: tns:DailyPrice
+     *
+     * @var \Bronevik\HotelsConnector\Element\DailyPrice[]
+     */
+    public $dailyPrices = [];
+
+    /**
+     * Type: tns:AvailableMeal
+     *
+     * @var \Bronevik\HotelsConnector\Element\AvailableMeal[]
+     */
+    public $meals = [];
 
     /**
      * Type: tns:HotelOfferCancellationPolicy
@@ -139,18 +158,9 @@ class HotelOffer
     public $paymentRecipient = null;
 
     /**
-     * Type: tns:DailyPrice
-     * 
-     * @var \Bronevik\HotelsConnector\Element\DailyPrice[]
+     * @var \Bronevik\HotelsConnector\Element\OfferPolicy[] $offerPolicies
      */
-    public $dailyPrices = [];
-
-    /**
-     * Type: tns:AvailableMeal
-     * 
-     * @var \Bronevik\HotelsConnector\Element\AvailableMeal[]
-     */
-    public $meals = [];
+    public $offerPolicies = [];
 
     /**
      * 
