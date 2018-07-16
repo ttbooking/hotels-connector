@@ -557,5 +557,41 @@ class HotelOffer
     {
         $this->meals[] = $meals;
     }
+
+    /**
+     * @return Tax[]
+     */
+    public function getTaxes()
+    {
+        return $this->taxes;
+    }
+
+    /**
+     * @param Tax[] $taxes
+     * @return HotelOffer
+     */
+    public function setTaxes($taxes)
+    {
+        $this->taxes = $taxes;
+        return $this;
+    }
+
+    /**
+     * @return OfferPolicy[]
+     */
+    public function getOfferPolicies()
+    {
+        return $this->offerPolicies;
+    }
+
+    /**
+     * @param OfferPolicy[] $offerPolicies
+     * @return HotelOffer
+     */
+    public function setOfferPolicies($offerPolicies)
+    {
+        $this->offerPolicies = $offerPolicies;
+        return $this;
+    }
 }
 
