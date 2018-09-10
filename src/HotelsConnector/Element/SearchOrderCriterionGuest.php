@@ -1,18 +1,19 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class SearchOrderCriterionGuest extends SearchOrderCriterion
 {
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $name = null;
 
     /**
-     * 
-     * @param string $name 
+     *
+     * @param string $name
      */
     public function setName($name)
     {
@@ -20,7 +21,7 @@ class SearchOrderCriterionGuest extends SearchOrderCriterion
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getName()

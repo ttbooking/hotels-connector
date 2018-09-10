@@ -1,4 +1,5 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class Contract
@@ -6,7 +7,7 @@ class Contract
     /**
      * Внутренний идентификатор договора
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $id = null;
@@ -14,7 +15,7 @@ class Contract
     /**
      * Номер договора
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $number = null;
@@ -22,14 +23,14 @@ class Contract
     /**
      * Дата начала действия договора
      * Type: xsd:date
-     * 
+     *
      * @var date
      */
     public $beginsAt = null;
 
     /**
-     * 
-     * @param int $id 
+     *
+     * @param int $id
      */
     public function setId($id)
     {
@@ -37,7 +38,7 @@ class Contract
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getId()
@@ -46,8 +47,8 @@ class Contract
     }
 
     /**
-     * 
-     * @param string $number 
+     *
+     * @param string $number
      */
     public function setNumber($number)
     {
@@ -55,7 +56,7 @@ class Contract
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getNumber()
@@ -64,8 +65,8 @@ class Contract
     }
 
     /**
-     * 
-     * @param date $beginsAt 
+     *
+     * @param date $beginsAt
      */
     public function setBeginsAt($beginsAt)
     {
@@ -73,7 +74,7 @@ class Contract
     }
 
     /**
-     * 
+     *
      * @return date
      */
     public function getBeginsAt()

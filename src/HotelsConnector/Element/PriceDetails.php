@@ -1,25 +1,26 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class PriceDetails
 {
     /**
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $vatApplicable = null;
 
     /**
      * Type: tns:HotelPriceDetails
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\HotelPriceDetails
      */
     public $hotel = null;
 
     /**
      * Type: tns:ClientPriceDetails
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\ClientPriceDetails
      */
     public $client = null;
@@ -27,13 +28,13 @@ class PriceDetails
     /**
      * Дополнительные цены
      * Type: tns:NamedDetailedPrice
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\NamedDetailedPrice[]
      */
     public $extra = [];
 
     /**
-     * 
+     *
      */
     public function __construct()
     {
@@ -42,8 +43,8 @@ class PriceDetails
     }
 
     /**
-     * 
-     * @param boolean $vatApplicable 
+     *
+     * @param boolean $vatApplicable
      */
     public function setVatApplicable($vatApplicable)
     {
@@ -51,7 +52,7 @@ class PriceDetails
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getVatApplicable()
@@ -60,8 +61,8 @@ class PriceDetails
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\HotelPriceDetails $hotel 
+     *
+     * @param \Bronevik\HotelsConnector\Element\HotelPriceDetails $hotel
      */
     public function setHotel($hotel)
     {
@@ -69,7 +70,7 @@ class PriceDetails
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\HotelPriceDetails
      */
     public function getHotel()
@@ -78,8 +79,8 @@ class PriceDetails
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\ClientPriceDetails $client 
+     *
+     * @param \Bronevik\HotelsConnector\Element\ClientPriceDetails $client
      */
     public function setClient($client)
     {
@@ -87,7 +88,7 @@ class PriceDetails
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\ClientPriceDetails
      */
     public function getClient()
@@ -96,7 +97,7 @@ class PriceDetails
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasExtra()
@@ -105,7 +106,7 @@ class PriceDetails
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\NamedDetailedPrice[]
      */
     public function getExtra()
@@ -114,8 +115,8 @@ class PriceDetails
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\NamedDetailedPrice $extra 
+     *
+     * @param \Bronevik\HotelsConnector\Element\NamedDetailedPrice $extra
      */
     public function addExtra($extra)
     {

@@ -1,9 +1,10 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Запрос на поиск предложений по определённому городу
- * 
+ *
  */
 class SearchHotelOffersRequest extends BaseRequest
 {
@@ -11,7 +12,7 @@ class SearchHotelOffersRequest extends BaseRequest
      * Идентификатор города, по
      *                                         которому будет идти поиск
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $cityId = null;
@@ -20,7 +21,7 @@ class SearchHotelOffersRequest extends BaseRequest
      * Идентификатор отеля, по
      *                                         которому будет идти поиск
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $hotelId = null;
@@ -28,7 +29,7 @@ class SearchHotelOffersRequest extends BaseRequest
     /**
      * Дата заезда
      * Type: xsd:date
-     * 
+     *
      * @var date
      */
     public $arrivalDate = null;
@@ -36,7 +37,7 @@ class SearchHotelOffersRequest extends BaseRequest
     /**
      * Дата выезда
      * Type: xsd:date
-     * 
+     *
      * @var date
      */
     public $departureDate = null;
@@ -44,7 +45,7 @@ class SearchHotelOffersRequest extends BaseRequest
     /**
      * Валюта расчёта
      * Type: tns:Currency
-     * 
+     *
      * @var string
      */
     public $currency = null;
@@ -52,14 +53,14 @@ class SearchHotelOffersRequest extends BaseRequest
     /**
      * Критерии поиска
      * Type: tns:SearchOfferCriterion
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\SearchOfferCriterion[]
      */
     public $searchCriteria = [];
 
     /**
-     * 
-     * @param int $cityId 
+     *
+     * @param int $cityId
      */
     public function setCityId($cityId)
     {
@@ -67,7 +68,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getCityId()
@@ -76,8 +77,8 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param int $hotelId 
+     *
+     * @param int $hotelId
      */
     public function setHotelId($hotelId)
     {
@@ -85,7 +86,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getHotelId()
@@ -94,8 +95,8 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param date $arrivalDate 
+     *
+     * @param date $arrivalDate
      */
     public function setArrivalDate($arrivalDate)
     {
@@ -103,7 +104,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return date
      */
     public function getArrivalDate()
@@ -112,8 +113,8 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param date $departureDate 
+     *
+     * @param date $departureDate
      */
     public function setDepartureDate($departureDate)
     {
@@ -121,7 +122,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return date
      */
     public function getDepartureDate()
@@ -130,8 +131,8 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param string $currency 
+     *
+     * @param string $currency
      */
     public function setCurrency($currency)
     {
@@ -139,7 +140,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getCurrency()
@@ -148,7 +149,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasSearchCriteria()
@@ -157,7 +158,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\SearchOfferCriterion[]
      */
     public function getSearchCriteria()
@@ -166,8 +167,8 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\SearchOfferCriterion $searchCriteria 
+     *
+     * @param \Bronevik\HotelsConnector\Element\SearchOfferCriterion $searchCriteria
      */
     public function addSearchCriteria($searchCriteria)
     {

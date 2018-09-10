@@ -1,17 +1,18 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class GetHotelInfoRequest extends BaseRequest
 {
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int[]
      */
     public $hotelId = [];
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasHotelId()
@@ -20,7 +21,7 @@ class GetHotelInfoRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return int[]
      */
     public function getHotelId()
@@ -29,8 +30,8 @@ class GetHotelInfoRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param int $hotelId 
+     *
+     * @param int $hotelId
      */
     public function addHotelId($hotelId)
     {

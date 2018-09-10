@@ -1,4 +1,5 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class OfferPolicy
@@ -14,7 +15,7 @@ class OfferPolicy
      */
     public function __construct($description)
     {
-      $this->description = $description;
+        $this->description = $description;
     }
 
     /**
@@ -22,7 +23,7 @@ class OfferPolicy
      */
     public function getDescription()
     {
-      return $this->description;
+        return $this->description;
     }
 
     /**
@@ -31,8 +32,8 @@ class OfferPolicy
      */
     public function setDescription($description)
     {
-      $this->description = $description;
-      return $this;
+        $this->description = $description;
+        return $this;
     }
 
 }

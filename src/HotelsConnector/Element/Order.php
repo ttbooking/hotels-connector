@@ -1,53 +1,54 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class Order
 {
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $id = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $contactPhone = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $contactPerson = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $contactEmail = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $comment = null;
 
     /**
      * Type: tns:OrderService
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\OrderService[]
      */
     public $services = [];
 
     /**
-     * 
-     * @param int $id 
+     *
+     * @param int $id
      */
     public function setId($id)
     {
@@ -55,7 +56,7 @@ class Order
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getId()
@@ -64,8 +65,8 @@ class Order
     }
 
     /**
-     * 
-     * @param string $contactPhone 
+     *
+     * @param string $contactPhone
      */
     public function setContactPhone($contactPhone)
     {
@@ -73,7 +74,7 @@ class Order
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getContactPhone()
@@ -82,8 +83,8 @@ class Order
     }
 
     /**
-     * 
-     * @param string $contactPerson 
+     *
+     * @param string $contactPerson
      */
     public function setContactPerson($contactPerson)
     {
@@ -91,7 +92,7 @@ class Order
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getContactPerson()
@@ -100,8 +101,8 @@ class Order
     }
 
     /**
-     * 
-     * @param string $contactEmail 
+     *
+     * @param string $contactEmail
      */
     public function setContactEmail($contactEmail)
     {
@@ -109,7 +110,7 @@ class Order
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getContactEmail()
@@ -118,8 +119,8 @@ class Order
     }
 
     /**
-     * 
-     * @param string $comment 
+     *
+     * @param string $comment
      */
     public function setComment($comment)
     {
@@ -127,7 +128,7 @@ class Order
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getComment()
@@ -136,7 +137,7 @@ class Order
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasServices()
@@ -145,7 +146,7 @@ class Order
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\OrderService[]
      */
     public function getServices()
@@ -154,8 +155,8 @@ class Order
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\OrderService $services 
+     *
+     * @param \Bronevik\HotelsConnector\Element\OrderService $services
      */
     public function addServices($services)
     {

@@ -1,24 +1,25 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 abstract class BaseRequest
 {
     /**
      * Type: tns:Credentials
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\Credentials
      */
     public $credentials = null;
 
     /**
-     * Type: 
-     * 
-     * @var 
+     * Type:
+     *
+     * @var
      */
     public $language = null;
 
     /**
-     * 
+     *
      */
     public function __construct()
     {
@@ -26,8 +27,8 @@ abstract class BaseRequest
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\Credentials $credentials 
+     *
+     * @param \Bronevik\HotelsConnector\Element\Credentials $credentials
      */
     public function setCredentials($credentials)
     {
@@ -35,7 +36,7 @@ abstract class BaseRequest
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\Credentials
      */
     public function getCredentials()
@@ -44,8 +45,8 @@ abstract class BaseRequest
     }
 
     /**
-     * 
-     * @param  $language 
+     *
+     * @param  $language
      */
     public function setLanguage($language)
     {
@@ -53,7 +54,7 @@ abstract class BaseRequest
     }
 
     /**
-     * 
+     *
      */
     public function getLanguage()
     {

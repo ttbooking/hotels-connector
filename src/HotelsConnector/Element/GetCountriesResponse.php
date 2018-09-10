@@ -1,17 +1,18 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class GetCountriesResponse extends BaseResponse
 {
     /**
      * Type: tns:Country
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\Country[]
      */
     public $countries = [];
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasCountries()
@@ -20,7 +21,7 @@ class GetCountriesResponse extends BaseResponse
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\Country[]
      */
     public function getCountries()
@@ -29,8 +30,8 @@ class GetCountriesResponse extends BaseResponse
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\Country $countries 
+     *
+     * @param \Bronevik\HotelsConnector\Element\Country $countries
      */
     public function addCountries($countries)
     {

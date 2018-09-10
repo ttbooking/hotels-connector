@@ -1,4 +1,5 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class BreakfastInfo
@@ -6,7 +7,7 @@ class BreakfastInfo
     /**
      * Название завтрака
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $name = null;
@@ -14,7 +15,7 @@ class BreakfastInfo
     /**
      * Стоимость
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $price = null;
@@ -22,14 +23,14 @@ class BreakfastInfo
     /**
      * Включен в стоимость проживания
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $included = null;
 
     /**
-     * 
-     * @param string $name 
+     *
+     * @param string $name
      */
     public function setName($name)
     {
@@ -37,7 +38,7 @@ class BreakfastInfo
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getName()
@@ -46,8 +47,8 @@ class BreakfastInfo
     }
 
     /**
-     * 
-     * @param string $price 
+     *
+     * @param string $price
      */
     public function setPrice($price)
     {
@@ -55,7 +56,7 @@ class BreakfastInfo
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getPrice()
@@ -64,8 +65,8 @@ class BreakfastInfo
     }
 
     /**
-     * 
-     * @param boolean $included 
+     *
+     * @param boolean $included
      */
     public function setIncluded($included)
     {
@@ -73,7 +74,7 @@ class BreakfastInfo
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getIncluded()

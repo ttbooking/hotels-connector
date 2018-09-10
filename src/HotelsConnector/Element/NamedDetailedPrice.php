@@ -1,4 +1,5 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class NamedDetailedPrice extends DetailedPrice
@@ -6,14 +7,14 @@ class NamedDetailedPrice extends DetailedPrice
     /**
      * Наименование цены
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $name = null;
 
     /**
-     * 
-     * @param string $name 
+     *
+     * @param string $name
      */
     public function setName($name)
     {
@@ -21,7 +22,7 @@ class NamedDetailedPrice extends DetailedPrice
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getName()

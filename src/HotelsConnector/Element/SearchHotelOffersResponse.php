@@ -1,17 +1,18 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class SearchHotelOffersResponse extends BaseResponse
 {
     /**
      * Type: tns:HotelWithOffers
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\HotelWithOffers[]
      */
     public $hotels = [];
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasHotels()
@@ -20,7 +21,7 @@ class SearchHotelOffersResponse extends BaseResponse
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\HotelWithOffers[]
      */
     public function getHotels()
@@ -29,8 +30,8 @@ class SearchHotelOffersResponse extends BaseResponse
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\HotelWithOffers $hotels 
+     *
+     * @param \Bronevik\HotelsConnector\Element\HotelWithOffers $hotels
      */
     public function addHotels($hotels)
     {

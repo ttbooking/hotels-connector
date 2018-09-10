@@ -1,11 +1,12 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class DetailedPrice
 {
     /**
      * Type: xsd:float
-     * 
+     *
      * @var float
      */
     public $price = null;
@@ -13,7 +14,7 @@ class DetailedPrice
     /**
      * Сумма ндс
      * Type: xsd:float
-     * 
+     *
      * @var float
      */
     public $vatAmount = null;
@@ -21,14 +22,14 @@ class DetailedPrice
     /**
      * Валюта (трекхбуквенный код)
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $currency = null;
 
     /**
-     * 
-     * @param float $price 
+     *
+     * @param float $price
      */
     public function setPrice($price)
     {
@@ -36,7 +37,7 @@ class DetailedPrice
     }
 
     /**
-     * 
+     *
      * @return float
      */
     public function getPrice()
@@ -45,8 +46,8 @@ class DetailedPrice
     }
 
     /**
-     * 
-     * @param float $vatAmount 
+     *
+     * @param float $vatAmount
      */
     public function setVatAmount($vatAmount)
     {
@@ -54,7 +55,7 @@ class DetailedPrice
     }
 
     /**
-     * 
+     *
      * @return float
      */
     public function getVatAmount()
@@ -63,8 +64,8 @@ class DetailedPrice
     }
 
     /**
-     * 
-     * @param string $currency 
+     *
+     * @param string $currency
      */
     public function setCurrency($currency)
     {
@@ -72,7 +73,7 @@ class DetailedPrice
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getCurrency()

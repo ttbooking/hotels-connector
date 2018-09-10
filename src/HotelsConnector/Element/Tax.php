@@ -1,4 +1,5 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class Tax
@@ -38,11 +39,11 @@ class Tax
      */
     public function __construct($type, $amount, $currency, $included, $comment)
     {
-      $this->type = $type;
-      $this->amount = $amount;
-      $this->currency = $currency;
-      $this->included = $included;
-      $this->comment = $comment;
+        $this->type = $type;
+        $this->amount = $amount;
+        $this->currency = $currency;
+        $this->included = $included;
+        $this->comment = $comment;
     }
 
     /**
@@ -50,7 +51,7 @@ class Tax
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -59,8 +60,8 @@ class Tax
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
 
     /**
@@ -68,7 +69,7 @@ class Tax
      */
     public function getAmount()
     {
-      return $this->amount;
+        return $this->amount;
     }
 
     /**
@@ -77,8 +78,8 @@ class Tax
      */
     public function setAmount($amount)
     {
-      $this->amount = $amount;
-      return $this;
+        $this->amount = $amount;
+        return $this;
     }
 
     /**
@@ -86,7 +87,7 @@ class Tax
      */
     public function getCurrency()
     {
-      return $this->currency;
+        return $this->currency;
     }
 
     /**
@@ -95,8 +96,8 @@ class Tax
      */
     public function setCurrency($currency)
     {
-      $this->currency = $currency;
-      return $this;
+        $this->currency = $currency;
+        return $this;
     }
 
     /**
@@ -104,7 +105,7 @@ class Tax
      */
     public function getIncluded()
     {
-      return $this->included;
+        return $this->included;
     }
 
     /**
@@ -113,8 +114,8 @@ class Tax
      */
     public function setIncluded($included)
     {
-      $this->included = $included;
-      return $this;
+        $this->included = $included;
+        return $this;
     }
 
     /**
@@ -122,7 +123,7 @@ class Tax
      */
     public function getComment()
     {
-      return $this->comment;
+        return $this->comment;
     }
 
     /**
@@ -131,8 +132,8 @@ class Tax
      */
     public function setComment($comment)
     {
-      $this->comment = $comment;
-      return $this;
+        $this->comment = $comment;
+        return $this;
     }
 
 }

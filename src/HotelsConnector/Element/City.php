@@ -1,53 +1,54 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class City
 {
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $id = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $name = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $latitude = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $longitude = null;
 
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $regionId = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $regionName = null;
 
     /**
-     * 
-     * @param int $id 
+     *
+     * @param int $id
      */
     public function setId($id)
     {
@@ -55,7 +56,7 @@ class City
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getId()
@@ -64,8 +65,8 @@ class City
     }
 
     /**
-     * 
-     * @param string $name 
+     *
+     * @param string $name
      */
     public function setName($name)
     {
@@ -73,7 +74,7 @@ class City
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getName()
@@ -82,8 +83,8 @@ class City
     }
 
     /**
-     * 
-     * @param string $latitude 
+     *
+     * @param string $latitude
      */
     public function setLatitude($latitude)
     {
@@ -91,7 +92,7 @@ class City
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getLatitude()
@@ -100,8 +101,8 @@ class City
     }
 
     /**
-     * 
-     * @param string $longitude 
+     *
+     * @param string $longitude
      */
     public function setLongitude($longitude)
     {
@@ -109,7 +110,7 @@ class City
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getLongitude()
@@ -118,8 +119,8 @@ class City
     }
 
     /**
-     * 
-     * @param int $regionId 
+     *
+     * @param int $regionId
      */
     public function setRegionId($regionId)
     {
@@ -127,7 +128,7 @@ class City
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getRegionId()
@@ -136,8 +137,8 @@ class City
     }
 
     /**
-     * 
-     * @param string $regionName 
+     *
+     * @param string $regionName
      */
     public function setRegionName($regionName)
     {
@@ -145,7 +146,7 @@ class City
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getRegionName()

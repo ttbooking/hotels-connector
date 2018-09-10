@@ -1,4 +1,5 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class OrderServiceAccommodation extends OrderService
@@ -6,98 +7,98 @@ class OrderServiceAccommodation extends OrderService
     /**
      * Сведения о договоре, на основании которого произведено бронирование
      * Type: tns:Contract
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\Contract
      */
     public $contract = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $offerCode = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $offerName = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $hotelId = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $hotelName = null;
 
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $roomId = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $roomType = null;
 
     /**
      * Type: xsd:dateTime
-     * 
+     *
      * @var string
      */
     public $checkin = null;
 
     /**
      * Type: xsd:dateTime
-     * 
+     *
      * @var string
      */
     public $checkout = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string[]
      */
     public $guests = [];
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $comment = null;
 
     /**
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $vatApplicable = null;
 
     /**
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $vatIncluded = null;
 
     /**
      * Type: xsd:float
-     * 
+     *
      * @var float
      */
     public $vatAmount = null;
@@ -105,7 +106,7 @@ class OrderServiceAccommodation extends OrderService
     /**
      * Флаг невозвратности предложения
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $nonRefundable = null;
@@ -114,21 +115,21 @@ class OrderServiceAccommodation extends OrderService
      * Номер является блочным. Блочный номер - это номер с общей ванной комнатой и
      *                                         туалетом для нескольких номеров
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $isBlockRoom = null;
 
     /**
      * Type: tns:PaymentRecipients
-     * 
+     *
      * @var string
      */
     public $paymentRecipient = null;
 
     /**
      * Type: tns:AvailableMeal
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\AvailableMeal[]
      */
     public $meals = [];
@@ -144,16 +145,22 @@ class OrderServiceAccommodation extends OrderService
     public $offerPolicies = [];
 
     /**
-     * 
+     * @var \Bronevik\HotelsConnector\Element\DailyPrices $dailyPrices
+     */
+    protected $dailyPrices = null;
+
+    /**
+     *
      */
     public function __construct()
     {
         $this->contract = new \Bronevik\HotelsConnector\Element\Contract;
+        parent::__construct();
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\Contract $contract 
+     *
+     * @param \Bronevik\HotelsConnector\Element\Contract $contract
      */
     public function setContract($contract)
     {
@@ -161,7 +168,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\Contract
      */
     public function getContract()
@@ -170,8 +177,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $offerCode 
+     *
+     * @param string $offerCode
      */
     public function setOfferCode($offerCode)
     {
@@ -179,7 +186,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getOfferCode()
@@ -188,8 +195,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $offerName 
+     *
+     * @param string $offerName
      */
     public function setOfferName($offerName)
     {
@@ -197,7 +204,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getOfferName()
@@ -206,8 +213,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $hotelId 
+     *
+     * @param string $hotelId
      */
     public function setHotelId($hotelId)
     {
@@ -215,7 +222,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getHotelId()
@@ -224,8 +231,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $hotelName 
+     *
+     * @param string $hotelName
      */
     public function setHotelName($hotelName)
     {
@@ -233,7 +240,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getHotelName()
@@ -242,8 +249,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param int $roomId 
+     *
+     * @param int $roomId
      */
     public function setRoomId($roomId)
     {
@@ -251,7 +258,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getRoomId()
@@ -260,8 +267,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $roomType 
+     *
+     * @param string $roomType
      */
     public function setRoomType($roomType)
     {
@@ -269,7 +276,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getRoomType()
@@ -278,8 +285,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $checkin 
+     *
+     * @param string $checkin
      */
     public function setCheckin($checkin)
     {
@@ -287,7 +294,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getCheckin()
@@ -296,8 +303,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $checkout 
+     *
+     * @param string $checkout
      */
     public function setCheckout($checkout)
     {
@@ -305,7 +312,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getCheckout()
@@ -314,7 +321,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasGuests()
@@ -323,7 +330,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string[]
      */
     public function getGuests()
@@ -332,8 +339,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $guests 
+     *
+     * @param string $guests
      */
     public function addGuests($guests)
     {
@@ -341,8 +348,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $comment 
+     *
+     * @param string $comment
      */
     public function setComment($comment)
     {
@@ -350,7 +357,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getComment()
@@ -359,8 +366,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param boolean $vatApplicable 
+     *
+     * @param boolean $vatApplicable
      */
     public function setVatApplicable($vatApplicable)
     {
@@ -368,7 +375,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getVatApplicable()
@@ -377,8 +384,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param boolean $vatIncluded 
+     *
+     * @param boolean $vatIncluded
      */
     public function setVatIncluded($vatIncluded)
     {
@@ -386,7 +393,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getVatIncluded()
@@ -395,8 +402,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param float $vatAmount 
+     *
+     * @param float $vatAmount
      */
     public function setVatAmount($vatAmount)
     {
@@ -404,7 +411,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return float
      */
     public function getVatAmount()
@@ -413,8 +420,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param boolean $nonRefundable 
+     *
+     * @param boolean $nonRefundable
      */
     public function setNonRefundable($nonRefundable)
     {
@@ -422,7 +429,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getNonRefundable()
@@ -431,8 +438,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param boolean $isBlockRoom 
+     *
+     * @param boolean $isBlockRoom
      */
     public function setIsBlockRoom($isBlockRoom)
     {
@@ -440,7 +447,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getIsBlockRoom()
@@ -449,8 +456,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param string $paymentRecipient 
+     *
+     * @param string $paymentRecipient
      */
     public function setPaymentRecipient($paymentRecipient)
     {
@@ -458,7 +465,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getPaymentRecipient()
@@ -467,7 +474,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasMeals()
@@ -476,7 +483,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\AvailableMeal[]
      */
     public function getMeals()
@@ -485,8 +492,8 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\AvailableMeal $meals 
+     *
+     * @param \Bronevik\HotelsConnector\Element\AvailableMeal $meals
      */
     public function addMeals($meals)
     {
@@ -526,6 +533,24 @@ class OrderServiceAccommodation extends OrderService
     public function setOfferPolicies($offerPolicies)
     {
         $this->offerPolicies = $offerPolicies;
+        return $this;
+    }
+
+    /**
+     * @return DailyPrices
+     */
+    public function getDailyPrices()
+    {
+        return $this->dailyPrices;
+    }
+
+    /**
+     * @param DailyPrices $dailyPrices
+     * @return OrderServiceAccommodation
+     */
+    public function setDailyPrices($dailyPrices)
+    {
+        $this->dailyPrices = $dailyPrices;
         return $this;
     }
 }

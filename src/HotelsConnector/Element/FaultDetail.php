@@ -1,18 +1,19 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class FaultDetail
 {
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $traceId = null;
 
     /**
-     * 
-     * @param string $traceId 
+     *
+     * @param string $traceId
      */
     public function setTraceId($traceId)
     {
@@ -20,7 +21,7 @@ class FaultDetail
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getTraceId()

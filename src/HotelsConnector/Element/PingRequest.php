@@ -1,18 +1,19 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class PingRequest extends BaseRequest
 {
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $data = null;
 
     /**
-     * 
-     * @param string $data 
+     *
+     * @param string $data
      */
     public function setData($data)
     {
@@ -20,7 +21,7 @@ class PingRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getData()

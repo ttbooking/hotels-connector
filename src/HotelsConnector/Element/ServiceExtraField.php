@@ -1,4 +1,5 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class ServiceExtraField
@@ -20,8 +21,8 @@ class ServiceExtraField
      */
     public function __construct($name, $value)
     {
-      $this->name = $name;
-      $this->value = $value;
+        $this->name = $name;
+        $this->value = $value;
     }
 
     /**
@@ -29,7 +30,7 @@ class ServiceExtraField
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -38,8 +39,8 @@ class ServiceExtraField
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -47,7 +48,7 @@ class ServiceExtraField
      */
     public function getValue()
     {
-      return $this->value;
+        return $this->value;
     }
 
     /**
@@ -56,8 +57,8 @@ class ServiceExtraField
      */
     public function setValue($value)
     {
-      $this->value = $value;
-      return $this;
+        $this->value = $value;
+        return $this;
     }
 
 }

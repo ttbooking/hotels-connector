@@ -1,25 +1,26 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class ServiceAccommodation extends Service
 {
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $offerCode = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string[]
      */
     public $guests = [];
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $comment = null;
@@ -30,15 +31,25 @@ class ServiceAccommodation extends Service
     public $sellingPrice = null;
 
     /**
+     * @var int $checkinHour
+     */
+    protected $checkinHour = null;
+
+    /**
+     * @var int $checkoutHour
+     */
+    protected $checkoutHour = null;
+
+    /**
      * Type: xsd:int
-     * 
+     *
      * @var int[]
      */
     public $meals = [];
 
     /**
-     * 
-     * @param string $offerCode 
+     *
+     * @param string $offerCode
      */
     public function setOfferCode($offerCode)
     {
@@ -46,7 +57,7 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getOfferCode()
@@ -55,7 +66,7 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasGuests()
@@ -64,7 +75,7 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * 
+     *
      * @return string[]
      */
     public function getGuests()
@@ -73,8 +84,8 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * 
-     * @param string $guests 
+     *
+     * @param string $guests
      */
     public function addGuests($guests)
     {
@@ -82,8 +93,8 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * 
-     * @param string $comment 
+     *
+     * @param string $comment
      */
     public function setComment($comment)
     {
@@ -91,7 +102,7 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getComment()
@@ -100,7 +111,7 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasMeals()
@@ -127,7 +138,43 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * 
+     * @return int
+     */
+    public function getCheckInHour()
+    {
+        return $this->checkinHour;
+    }
+
+    /**
+     * @param int $checkInHour
+     * @return ServiceAccommodation
+     */
+    public function setCheckInHour($checkInHour)
+    {
+        $this->checkinHour = $checkInHour;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCheckOutHour()
+    {
+        return $this->checkoutHour;
+    }
+
+    /**
+     * @param int $checkOutHour
+     * @return ServiceAccommodation
+     */
+    public function setCheckOutHour($checkOutHour)
+    {
+        $this->checkoutHour = $checkOutHour;
+        return $this;
+    }
+
+    /**
+     *
      * @return int[]
      */
     public function getMeals()
@@ -136,8 +183,8 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * 
-     * @param int $meals 
+     *
+     * @param int $meals
      */
     public function addMeals($meals)
     {

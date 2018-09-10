@@ -1,25 +1,26 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
 {
     /**
      * Type: xsd:date
-     * 
+     *
      * @var date
      */
     public $dateStart = null;
 
     /**
      * Type: xsd:date
-     * 
+     *
      * @var date
      */
     public $dateEnd = null;
 
     /**
-     * 
-     * @param date $dateStart 
+     *
+     * @param date $dateStart
      */
     public function setDateStart($dateStart)
     {
@@ -27,7 +28,7 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
     }
 
     /**
-     * 
+     *
      * @return date
      */
     public function getDateStart()
@@ -36,8 +37,8 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
     }
 
     /**
-     * 
-     * @param date $dateEnd 
+     *
+     * @param date $dateEnd
      */
     public function setDateEnd($dateEnd)
     {
@@ -45,7 +46,7 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
     }
 
     /**
-     * 
+     *
      * @return date
      */
     public function getDateEnd()

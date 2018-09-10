@@ -1,22 +1,23 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Номер отеля
- * 
+ *
  */
 class HotelRoom
 {
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $id = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $name = null;
@@ -24,7 +25,7 @@ class HotelRoom
     /**
      * Доступные в номере удобства
      * Type: tns:AvailableAmenity
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\AvailableAmenity[]
      */
     public $availableAmenities = [];
@@ -32,7 +33,7 @@ class HotelRoom
     /**
      * Описание номера
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $description = null;
@@ -40,14 +41,14 @@ class HotelRoom
     /**
      * Фотографии номера
      * Type: tns:Image
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\Image[]
      */
     public $photos = [];
 
     /**
-     * 
-     * @param int $id 
+     *
+     * @param int $id
      */
     public function setId($id)
     {
@@ -55,7 +56,7 @@ class HotelRoom
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getId()
@@ -64,8 +65,8 @@ class HotelRoom
     }
 
     /**
-     * 
-     * @param string $name 
+     *
+     * @param string $name
      */
     public function setName($name)
     {
@@ -73,7 +74,7 @@ class HotelRoom
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getName()
@@ -82,7 +83,7 @@ class HotelRoom
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasAvailableAmenities()
@@ -91,7 +92,7 @@ class HotelRoom
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\AvailableAmenity[]
      */
     public function getAvailableAmenities()
@@ -100,8 +101,8 @@ class HotelRoom
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\AvailableAmenity $availableAmenities 
+     *
+     * @param \Bronevik\HotelsConnector\Element\AvailableAmenity $availableAmenities
      */
     public function addAvailableAmenities($availableAmenities)
     {
@@ -109,8 +110,8 @@ class HotelRoom
     }
 
     /**
-     * 
-     * @param string $description 
+     *
+     * @param string $description
      */
     public function setDescription($description)
     {
@@ -118,7 +119,7 @@ class HotelRoom
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getDescription()
@@ -127,7 +128,7 @@ class HotelRoom
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasPhotos()
@@ -136,7 +137,7 @@ class HotelRoom
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\Image[]
      */
     public function getPhotos()
@@ -145,8 +146,8 @@ class HotelRoom
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\Image $photos 
+     *
+     * @param \Bronevik\HotelsConnector\Element\Image $photos
      */
     public function addPhotos($photos)
     {

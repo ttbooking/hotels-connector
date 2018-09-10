@@ -1,22 +1,23 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Ответ на запрос создания ордера
- * 
+ *
  */
 class CancelOrderResponse extends BaseResponse
 {
     /**
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $result = null;
 
     /**
-     * 
-     * @param boolean $result 
+     *
+     * @param boolean $result
      */
     public function setResult($result)
     {
@@ -24,7 +25,7 @@ class CancelOrderResponse extends BaseResponse
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getResult()

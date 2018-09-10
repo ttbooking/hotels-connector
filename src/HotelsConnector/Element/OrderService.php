@@ -1,73 +1,60 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 abstract class OrderService
 {
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $id = null;
 
     /**
      * Type: xsd:dateTime
-     * 
+     *
      * @var string
      */
     public $date = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $referenceId = null;
 
     /**
-     * Type: xsd:float
-     * 
-     * @var float
-     */
-    public $price = null;
-
-    /**
-     * Type: xsd:float
-     * 
-     * @var float
-     */
-    public $commission = null;
-
-    /**
      * Type: tns:PriceDetails
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\PriceDetails
      */
     public $priceDetails = null;
 
     /**
      * Type: tns:CancellationPolicy
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\CancellationPolicy[]
      */
     public $cancellationPolicies = [];
 
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $statusId = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $statusName = null;
 
     /**
-     * 
+     *
      */
     public function __construct()
     {
@@ -75,8 +62,8 @@ abstract class OrderService
     }
 
     /**
-     * 
-     * @param int $id 
+     *
+     * @param int $id
      */
     public function setId($id)
     {
@@ -84,7 +71,7 @@ abstract class OrderService
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getId()
@@ -93,8 +80,8 @@ abstract class OrderService
     }
 
     /**
-     * 
-     * @param string $date 
+     *
+     * @param string $date
      */
     public function setDate($date)
     {
@@ -102,7 +89,7 @@ abstract class OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getDate()
@@ -111,8 +98,8 @@ abstract class OrderService
     }
 
     /**
-     * 
-     * @param string $referenceId 
+     *
+     * @param string $referenceId
      */
     public function setReferenceId($referenceId)
     {
@@ -120,7 +107,7 @@ abstract class OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getReferenceId()
@@ -129,44 +116,8 @@ abstract class OrderService
     }
 
     /**
-     * 
-     * @param float $price 
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-    }
-
-    /**
-     * 
-     * @return float
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * 
-     * @param float $commission 
-     */
-    public function setCommission($commission)
-    {
-        $this->commission = $commission;
-    }
-
-    /**
-     * 
-     * @return float
-     */
-    public function getCommission()
-    {
-        return $this->commission;
-    }
-
-    /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\PriceDetails $priceDetails 
+     *
+     * @param \Bronevik\HotelsConnector\Element\PriceDetails $priceDetails
      */
     public function setPriceDetails($priceDetails)
     {
@@ -174,7 +125,7 @@ abstract class OrderService
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\PriceDetails
      */
     public function getPriceDetails()
@@ -183,7 +134,7 @@ abstract class OrderService
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasCancellationPolicies()
@@ -192,7 +143,7 @@ abstract class OrderService
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\CancellationPolicy[]
      */
     public function getCancellationPolicies()
@@ -201,8 +152,8 @@ abstract class OrderService
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\CancellationPolicy $cancellationPolicies 
+     *
+     * @param \Bronevik\HotelsConnector\Element\CancellationPolicy $cancellationPolicies
      */
     public function addCancellationPolicies($cancellationPolicies)
     {
@@ -210,8 +161,8 @@ abstract class OrderService
     }
 
     /**
-     * 
-     * @param int $statusId 
+     *
+     * @param int $statusId
      */
     public function setStatusId($statusId)
     {
@@ -219,7 +170,7 @@ abstract class OrderService
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getStatusId()
@@ -228,8 +179,8 @@ abstract class OrderService
     }
 
     /**
-     * 
-     * @param string $statusName 
+     *
+     * @param string $statusName
      */
     public function setStatusName($statusName)
     {
@@ -237,7 +188,7 @@ abstract class OrderService
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getStatusName()

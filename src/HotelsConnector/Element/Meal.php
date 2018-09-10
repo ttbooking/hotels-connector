@@ -1,25 +1,26 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class Meal
 {
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $id = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $name = null;
 
     /**
-     * 
-     * @param int $id 
+     *
+     * @param int $id
      */
     public function setId($id)
     {
@@ -27,7 +28,7 @@ class Meal
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getId()
@@ -36,8 +37,8 @@ class Meal
     }
 
     /**
-     * 
-     * @param string $name 
+     *
+     * @param string $name
      */
     public function setName($name)
     {
@@ -45,7 +46,7 @@ class Meal
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getName()

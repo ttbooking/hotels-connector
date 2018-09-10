@@ -1,18 +1,19 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class HotelOffer
 {
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $code = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $name = null;
@@ -20,7 +21,7 @@ class HotelOffer
     /**
      * Флаг наличия lhp-цен в предложении
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $lhp = null;
@@ -28,25 +29,17 @@ class HotelOffer
     /**
      * Флаг невозвратности предложения
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $nonRefundable = null;
 
     /**
      * Type: tns:PriceDetails
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\PriceDetails
      */
     public $priceDetails = null;
-
-    /**
-     * @deprecated
-     * Type: xsd:float
-     * 
-     * @var float
-     */
-    public $price = null;
 
     /**
      * @var \Bronevik\HotelsConnector\Element\Tax[] $taxes
@@ -55,28 +48,21 @@ class HotelOffer
 
     /**
      * Type: tns:Currency
-     * 
+     *
      * @var string
      */
     public $currency = null;
 
     /**
-     * Type: xsd:float
-     * 
-     * @var float
-     */
-    public $commission = null;
-
-    /**
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $immediateConfirmation = null;
 
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $freeRooms = null;
@@ -97,7 +83,7 @@ class HotelOffer
 
     /**
      * Type: tns:HotelOfferCancellationPolicy
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\HotelOfferCancellationPolicy[]
      */
     public $cancellationPolicies = [];
@@ -105,14 +91,14 @@ class HotelOffer
     /**
      * Информация о завтраке
      * Type: tns:BreakfastInfo
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\BreakfastInfo
      */
     public $breakfastInfo = null;
 
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $roomId = null;
@@ -121,7 +107,7 @@ class HotelOffer
      * Количество гостей, которых можно
      *                                 разместить в номере
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $roomCapacity = null;
@@ -129,14 +115,14 @@ class HotelOffer
     /**
      * тип номера
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $roomType = null;
 
     /**
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $isSharedRoom = null;
@@ -145,14 +131,14 @@ class HotelOffer
      * Является ли номер блочным. Блочный номер - это номер с общей ванной комнатой и туалетом для
      *                                 нескольких номеров
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $isBlockRoom = null;
 
     /**
      * Type: tns:PaymentRecipients
-     * 
+     *
      * @var string
      */
     public $paymentRecipient = null;
@@ -163,7 +149,12 @@ class HotelOffer
     public $offerPolicies = [];
 
     /**
-     * 
+     * @var string $deepLink
+     */
+    protected $deepLink = null;
+
+    /**
+     *
      */
     public function __construct()
     {
@@ -172,8 +163,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param string $code 
+     *
+     * @param string $code
      */
     public function setCode($code)
     {
@@ -181,7 +172,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getCode()
@@ -190,8 +181,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param string $name 
+     *
+     * @param string $name
      */
     public function setName($name)
     {
@@ -199,7 +190,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getName()
@@ -208,8 +199,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param boolean $lhp 
+     *
+     * @param boolean $lhp
      */
     public function setLhp($lhp)
     {
@@ -217,7 +208,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getLhp()
@@ -226,8 +217,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param boolean $nonRefundable 
+     *
+     * @param boolean $nonRefundable
      */
     public function setNonRefundable($nonRefundable)
     {
@@ -235,7 +226,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getNonRefundable()
@@ -244,8 +235,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\PriceDetails $priceDetails 
+     *
+     * @param \Bronevik\HotelsConnector\Element\PriceDetails $priceDetails
      */
     public function setPriceDetails($priceDetails)
     {
@@ -253,7 +244,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\PriceDetails
      */
     public function getPriceDetails()
@@ -262,26 +253,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param float $price 
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-    }
-
-    /**
-     * 
-     * @return float
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * 
-     * @param string $currency 
+     *
+     * @param string $currency
      */
     public function setCurrency($currency)
     {
@@ -289,7 +262,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getCurrency()
@@ -298,26 +271,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param float $commission 
-     */
-    public function setCommission($commission)
-    {
-        $this->commission = $commission;
-    }
-
-    /**
-     * 
-     * @return float
-     */
-    public function getCommission()
-    {
-        return $this->commission;
-    }
-
-    /**
-     * 
-     * @param boolean $immediateConfirmation 
+     *
+     * @param boolean $immediateConfirmation
      */
     public function setImmediateConfirmation($immediateConfirmation)
     {
@@ -325,7 +280,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getImmediateConfirmation()
@@ -334,8 +289,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param int $freeRooms 
+     *
+     * @param int $freeRooms
      */
     public function setFreeRooms($freeRooms)
     {
@@ -343,7 +298,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getFreeRooms()
@@ -352,7 +307,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasCancellationPolicies()
@@ -361,7 +316,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\HotelOfferCancellationPolicy[]
      */
     public function getCancellationPolicies()
@@ -370,8 +325,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\HotelOfferCancellationPolicy $cancellationPolicies 
+     *
+     * @param \Bronevik\HotelsConnector\Element\HotelOfferCancellationPolicy $cancellationPolicies
      */
     public function addCancellationPolicies($cancellationPolicies)
     {
@@ -379,8 +334,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\BreakfastInfo $breakfastInfo 
+     *
+     * @param \Bronevik\HotelsConnector\Element\BreakfastInfo $breakfastInfo
      */
     public function setBreakfastInfo($breakfastInfo)
     {
@@ -388,7 +343,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\BreakfastInfo
      */
     public function getBreakfastInfo()
@@ -397,8 +352,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param int $roomId 
+     *
+     * @param int $roomId
      */
     public function setRoomId($roomId)
     {
@@ -406,7 +361,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getRoomId()
@@ -415,8 +370,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param int $roomCapacity 
+     *
+     * @param int $roomCapacity
      */
     public function setRoomCapacity($roomCapacity)
     {
@@ -424,7 +379,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getRoomCapacity()
@@ -433,8 +388,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param string $roomType 
+     *
+     * @param string $roomType
      */
     public function setRoomType($roomType)
     {
@@ -442,7 +397,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getRoomType()
@@ -451,8 +406,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param boolean $isSharedRoom 
+     *
+     * @param boolean $isSharedRoom
      */
     public function setIsSharedRoom($isSharedRoom)
     {
@@ -460,7 +415,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getIsSharedRoom()
@@ -469,8 +424,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param boolean $isBlockRoom 
+     *
+     * @param boolean $isBlockRoom
      */
     public function setIsBlockRoom($isBlockRoom)
     {
@@ -478,7 +433,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getIsBlockRoom()
@@ -487,8 +442,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param string $paymentRecipient 
+     *
+     * @param string $paymentRecipient
      */
     public function setPaymentRecipient($paymentRecipient)
     {
@@ -496,7 +451,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getPaymentRecipient()
@@ -505,7 +460,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasDailyPrices()
@@ -514,7 +469,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\DailyPrice[]
      */
     public function getDailyPrices()
@@ -523,8 +478,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\DailyPrice $dailyPrices 
+     *
+     * @param \Bronevik\HotelsConnector\Element\DailyPrice $dailyPrices
      */
     public function addDailyPrices($dailyPrices)
     {
@@ -532,7 +487,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasMeals()
@@ -541,7 +496,7 @@ class HotelOffer
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\AvailableMeal[]
      */
     public function getMeals()
@@ -550,8 +505,8 @@ class HotelOffer
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\AvailableMeal $meals 
+     *
+     * @param \Bronevik\HotelsConnector\Element\AvailableMeal $meals
      */
     public function addMeals($meals)
     {
@@ -591,6 +546,24 @@ class HotelOffer
     public function setOfferPolicies($offerPolicies)
     {
         $this->offerPolicies = $offerPolicies;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeepLink()
+    {
+        return $this->deepLink;
+    }
+
+    /**
+     * @param string $deepLink
+     * @return HotelOffer
+     */
+    public function setDeepLink($deepLink)
+    {
+        $this->deepLink = $deepLink;
         return $this;
     }
 }

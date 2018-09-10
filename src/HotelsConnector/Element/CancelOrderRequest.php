@@ -1,18 +1,19 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class CancelOrderRequest extends BaseRequest
 {
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $orderId = null;
 
     /**
-     * 
-     * @param int $orderId 
+     *
+     * @param int $orderId
      */
     public function setOrderId($orderId)
     {
@@ -20,7 +21,7 @@ class CancelOrderRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getOrderId()

@@ -1,18 +1,19 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class SearchOrderCriterionServiceId extends SearchOrderCriterion
 {
     /**
      * Type: xsd:int
-     * 
+     *
      * @var int
      */
     public $serviceId = null;
 
     /**
-     * 
-     * @param int $serviceId 
+     *
+     * @param int $serviceId
      */
     public function setServiceId($serviceId)
     {
@@ -20,7 +21,7 @@ class SearchOrderCriterionServiceId extends SearchOrderCriterion
     }
 
     /**
-     * 
+     *
      * @return int
      */
     public function getServiceId()

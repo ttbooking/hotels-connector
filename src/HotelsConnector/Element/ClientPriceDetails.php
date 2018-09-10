@@ -1,38 +1,39 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class ClientPriceDetails
 {
     /**
      * Type: xsd:boolean
-     * 
+     *
      * @var boolean
      */
     public $vatIncluded = null;
 
     /**
      * Type: tns:DetailedPrice
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\DetailedPrice
      */
     public $commission = null;
 
     /**
      * Type: tns:DetailedPrice
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\DetailedPrice
      */
     public $gross = null;
 
     /**
      * Type: tns:DetailedPrice
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\DetailedPrice
      */
     public $net = null;
 
     /**
-     * 
+     *
      */
     public function __construct()
     {
@@ -42,8 +43,8 @@ class ClientPriceDetails
     }
 
     /**
-     * 
-     * @param boolean $vatIncluded 
+     *
+     * @param boolean $vatIncluded
      */
     public function setVatIncluded($vatIncluded)
     {
@@ -51,7 +52,7 @@ class ClientPriceDetails
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
     public function getVatIncluded()
@@ -60,8 +61,8 @@ class ClientPriceDetails
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\DetailedPrice $commission 
+     *
+     * @param \Bronevik\HotelsConnector\Element\DetailedPrice $commission
      */
     public function setCommission($commission)
     {
@@ -69,7 +70,7 @@ class ClientPriceDetails
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\DetailedPrice
      */
     public function getCommission()
@@ -78,8 +79,8 @@ class ClientPriceDetails
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\DetailedPrice $gross 
+     *
+     * @param \Bronevik\HotelsConnector\Element\DetailedPrice $gross
      */
     public function setGross($gross)
     {
@@ -87,7 +88,7 @@ class ClientPriceDetails
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\DetailedPrice
      */
     public function getGross()
@@ -96,8 +97,8 @@ class ClientPriceDetails
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\DetailedPrice $net 
+     *
+     * @param \Bronevik\HotelsConnector\Element\DetailedPrice $net
      */
     public function setNet($net)
     {
@@ -105,7 +106,7 @@ class ClientPriceDetails
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\DetailedPrice
      */
     public function getNet()

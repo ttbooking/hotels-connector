@@ -1,17 +1,18 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class GetMealsResponse extends BaseResponse
 {
     /**
      * Type: tns:Meal
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\Meal[]
      */
     public $meals = [];
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasMeals()
@@ -20,7 +21,7 @@ class GetMealsResponse extends BaseResponse
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\Meal[]
      */
     public function getMeals()
@@ -29,8 +30,8 @@ class GetMealsResponse extends BaseResponse
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\Meal $meals 
+     *
+     * @param \Bronevik\HotelsConnector\Element\Meal $meals
      */
     public function addMeals($meals)
     {

@@ -64,88 +64,88 @@ class HotelsConnector
         $this->soapClient = new \SoapClient(
             Endpoints::$wsdlUrls[$endpoint],
             [
-                'location'    => $endpoint,
+                'location' => $endpoint,
                 'compression' => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_DEFLATE,
-                'cache_wsdl'  => $this->isDebugMode() ? WSDL_CACHE_NONE : WSDL_CACHE_BOTH,
-                'trace'       => $this->isDebugMode(),
-                'features'    => SOAP_SINGLE_ELEMENT_ARRAYS,
-                'classmap'    => [
-                    'Amenity'                                => Element\Amenity::class,
-                    'AvailableAmenity'                       => Element\AvailableAmenity::class,
-                    'AvailableMeal'                          => Element\AvailableMeal::class,
-                    'BaseRequest'                            => Element\BaseRequest::class,
-                    'BaseResponse'                           => Element\BaseResponse::class,
-                    'BreakfastInfo'                          => Element\BreakfastInfo::class,
-                    'CancelOrderRequest'                     => Element\CancelOrderRequest::class,
-                    'CancelOrderResponse'                    => Element\CancelOrderResponse::class,
-                    'CancellationPolicy'                     => Element\CancellationPolicy::class,
-                    'City'                                   => Element\City::class,
-                    'ClientPriceDetails'                     => Element\ClientPriceDetails::class,
-                    'Contract'                               => Element\Contract::class,
-                    'Country'                                => Element\Country::class,
-                    'CreateOrderRequest'                     => Element\CreateOrderRequest::class,
-                    'CreateOrderResponse'                    => Element\CreateOrderResponse::class,
-                    'Credentials'                            => Element\Credentials::class,
-                    'DailyPrice'                             => Element\DailyPrice::class,
-                    'DetailedPrice'                          => Element\DetailedPrice::class,
-                    'FaultDetail'                            => Element\FaultDetail::class,
-                    'GetAmenitiesRequest'                    => Element\GetAmenitiesRequest::class,
-                    'GetAmenitiesResponse'                   => Element\GetAmenitiesResponse::class,
-                    'GetCitiesRequest'                       => Element\GetCitiesRequest::class,
-                    'GetCitiesResponse'                      => Element\GetCitiesResponse::class,
-                    'GetCountriesRequest'                    => Element\GetCountriesRequest::class,
-                    'GetCountriesResponse'                   => Element\GetCountriesResponse::class,
-                    'GetHotelInfoRequest'                    => Element\GetHotelInfoRequest::class,
-                    'GetHotelInfoResponse'                   => Element\GetHotelInfoResponse::class,
-                    'GetHotelOfferRequest'                   => Element\GetHotelOfferRequest::class,
-                    'GetHotelOfferResponse'                  => Element\GetHotelOfferResponse::class,
-                    'GetMealsRequest'                        => Element\GetMealsRequest::class,
-                    'GetMealsResponse'                       => Element\GetMealsResponse::class,
-                    'GetOrderRequest'                        => Element\GetOrderRequest::class,
-                    'GetOrderResponse'                       => Element\GetOrderResponse::class,
-                    'Hotel'                                  => Element\Hotel::class,
-                    'HotelAmenity'                           => Element\HotelAmenity::class,
-                    'HotelOffer'                             => Element\HotelOffer::class,
-                    'HotelOfferCancellationPolicy'           => Element\HotelOfferCancellationPolicy::class,
-                    'HotelPriceDetails'                      => Element\HotelPriceDetails::class,
-                    'HotelRoom'                              => Element\HotelRoom::class,
-                    'HotelWithInfo'                          => Element\HotelWithInfo::class,
-                    'HotelWithOffers'                        => Element\HotelWithOffers::class,
-                    'Image'                                  => Element\Image::class,
-                    'InformationForGuest'                    => Element\InformationForGuest::class,
-                    'Meal'                                   => Element\Meal::class,
-                    'NamedDetailedPrice'                     => Element\NamedDetailedPrice::class,
-                    'Order'                                  => Element\Order::class,
-                    'OrderService'                           => Element\OrderService::class,
-                    'OrderServiceAccommodation'              => Element\OrderServiceAccommodation::class,
-                    'PingRequest'                            => Element\PingRequest::class,
-                    'PingResponse'                           => Element\PingResponse::class,
-                    'PriceDetails'                           => Element\PriceDetails::class,
-                    'SearchHotelOffersRequest'               => Element\SearchHotelOffersRequest::class,
-                    'SearchHotelOffersResponse'              => Element\SearchHotelOffersResponse::class,
-                    'SearchOfferCriterion'                   => Element\SearchOfferCriterion::class,
-                    'SearchOfferCriterionBreakfastIncluded'  => Element\SearchOfferCriterionBreakfastIncluded::class,
-                    'SearchOfferCriterionHotelCategory'      => Element\SearchOfferCriterionHotelCategory::class,
-                    'SearchOfferCriterionHotelName'          => Element\SearchOfferCriterionHotelName::class,
-                    'SearchOfferCriterionNumberOfGuests'     => Element\SearchOfferCriterionNumberOfGuests::class,
-                    'SearchOfferCriterionOnlyOnline'         => Element\SearchOfferCriterionOnlyOnline::class,
-                    'SearchOrderCriterion'                   => Element\SearchOrderCriterion::class,
-                    'SearchOrderCriterionArrivalDate'        => Element\SearchOrderCriterionArrivalDate::class,
-                    'SearchOrderCriterionCreateDate'         => Element\SearchOrderCriterionCreateDate::class,
-                    'SearchOrderCriterionGuest'              => Element\SearchOrderCriterionGuest::class,
-                    'SearchOrderCriterionOrderId'            => Element\SearchOrderCriterionOrderId::class,
-                    'SearchOrderCriterionServiceId'          => Element\SearchOrderCriterionServiceId::class,
+                'cache_wsdl' => $this->isDebugMode() ? WSDL_CACHE_NONE : WSDL_CACHE_BOTH,
+                'trace' => $this->isDebugMode(),
+                'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
+                'classmap' => [
+                    'Amenity' => Element\Amenity::class,
+                    'AvailableAmenity' => Element\AvailableAmenity::class,
+                    'AvailableMeal' => Element\AvailableMeal::class,
+                    'BaseRequest' => Element\BaseRequest::class,
+                    'BaseResponse' => Element\BaseResponse::class,
+                    'BreakfastInfo' => Element\BreakfastInfo::class,
+                    'CancelOrderRequest' => Element\CancelOrderRequest::class,
+                    'CancelOrderResponse' => Element\CancelOrderResponse::class,
+                    'CancellationPolicy' => Element\CancellationPolicy::class,
+                    'City' => Element\City::class,
+                    'ClientPriceDetails' => Element\ClientPriceDetails::class,
+                    'Contract' => Element\Contract::class,
+                    'Country' => Element\Country::class,
+                    'CreateOrderRequest' => Element\CreateOrderRequest::class,
+                    'CreateOrderResponse' => Element\CreateOrderResponse::class,
+                    'Credentials' => Element\Credentials::class,
+                    'DailyPrice' => Element\DailyPrice::class,
+                    'DetailedPrice' => Element\DetailedPrice::class,
+                    'FaultDetail' => Element\FaultDetail::class,
+                    'GetAmenitiesRequest' => Element\GetAmenitiesRequest::class,
+                    'GetAmenitiesResponse' => Element\GetAmenitiesResponse::class,
+                    'GetCitiesRequest' => Element\GetCitiesRequest::class,
+                    'GetCitiesResponse' => Element\GetCitiesResponse::class,
+                    'GetCountriesRequest' => Element\GetCountriesRequest::class,
+                    'GetCountriesResponse' => Element\GetCountriesResponse::class,
+                    'GetHotelInfoRequest' => Element\GetHotelInfoRequest::class,
+                    'GetHotelInfoResponse' => Element\GetHotelInfoResponse::class,
+                    'GetHotelOfferRequest' => Element\GetHotelOfferRequest::class,
+                    'GetHotelOfferResponse' => Element\GetHotelOfferResponse::class,
+                    'GetMealsRequest' => Element\GetMealsRequest::class,
+                    'GetMealsResponse' => Element\GetMealsResponse::class,
+                    'GetOrderRequest' => Element\GetOrderRequest::class,
+                    'GetOrderResponse' => Element\GetOrderResponse::class,
+                    'Hotel' => Element\Hotel::class,
+                    'HotelAmenity' => Element\HotelAmenity::class,
+                    'HotelOffer' => Element\HotelOffer::class,
+                    'HotelOfferCancellationPolicy' => Element\HotelOfferCancellationPolicy::class,
+                    'HotelPriceDetails' => Element\HotelPriceDetails::class,
+                    'HotelRoom' => Element\HotelRoom::class,
+                    'HotelWithInfo' => Element\HotelWithInfo::class,
+                    'HotelWithOffers' => Element\HotelWithOffers::class,
+                    'Image' => Element\Image::class,
+                    'InformationForGuest' => Element\InformationForGuest::class,
+                    'Meal' => Element\Meal::class,
+                    'NamedDetailedPrice' => Element\NamedDetailedPrice::class,
+                    'Order' => Element\Order::class,
+                    'OrderService' => Element\OrderService::class,
+                    'OrderServiceAccommodation' => Element\OrderServiceAccommodation::class,
+                    'PingRequest' => Element\PingRequest::class,
+                    'PingResponse' => Element\PingResponse::class,
+                    'PriceDetails' => Element\PriceDetails::class,
+                    'SearchHotelOffersRequest' => Element\SearchHotelOffersRequest::class,
+                    'SearchHotelOffersResponse' => Element\SearchHotelOffersResponse::class,
+                    'SearchOfferCriterion' => Element\SearchOfferCriterion::class,
+                    'SearchOfferCriterionBreakfastIncluded' => Element\SearchOfferCriterionBreakfastIncluded::class,
+                    'SearchOfferCriterionHotelCategory' => Element\SearchOfferCriterionHotelCategory::class,
+                    'SearchOfferCriterionHotelName' => Element\SearchOfferCriterionHotelName::class,
+                    'SearchOfferCriterionNumberOfGuests' => Element\SearchOfferCriterionNumberOfGuests::class,
+                    'SearchOfferCriterionOnlyOnline' => Element\SearchOfferCriterionOnlyOnline::class,
+                    'SearchOrderCriterion' => Element\SearchOrderCriterion::class,
+                    'SearchOrderCriterionArrivalDate' => Element\SearchOrderCriterionArrivalDate::class,
+                    'SearchOrderCriterionCreateDate' => Element\SearchOrderCriterionCreateDate::class,
+                    'SearchOrderCriterionGuest' => Element\SearchOrderCriterionGuest::class,
+                    'SearchOrderCriterionOrderId' => Element\SearchOrderCriterionOrderId::class,
+                    'SearchOrderCriterionServiceId' => Element\SearchOrderCriterionServiceId::class,
                     'SearchOrderCriterionServiceReferenceId' => Element\SearchOrderCriterionServiceReferenceId::class,
-                    'SearchOrdersRequest'                    => Element\SearchOrdersRequest::class,
-                    'SearchOrdersResponse'                   => Element\SearchOrdersResponse::class,
-                    'Service'                                => Element\Service::class,
-                    'ServiceAccommodation'                   => Element\ServiceAccommodation::class,
-                    'UpdateOrderRequest'                     => Element\UpdateOrderRequest::class,
-                    'UpdateOrderResponse'                    => Element\UpdateOrderResponse::class,
-					//update 2.0.3
-					'ServiceExtraField'                     => Element\ServiceExtraField::class,
-                    'Tax'                                   => Element\Tax::class,
-                    'OfferPolicy'                           => Element\OfferPolicy::class
+                    'SearchOrdersRequest' => Element\SearchOrdersRequest::class,
+                    'SearchOrdersResponse' => Element\SearchOrdersResponse::class,
+                    'Service' => Element\Service::class,
+                    'ServiceAccommodation' => Element\ServiceAccommodation::class,
+                    'UpdateOrderRequest' => Element\UpdateOrderRequest::class,
+                    'UpdateOrderResponse' => Element\UpdateOrderResponse::class,
+                    //update 2.0.3
+                    'ServiceExtraField' => Element\ServiceExtraField::class,
+                    'Tax' => Element\Tax::class,
+                    'OfferPolicy' => Element\OfferPolicy::class
                 ],
             ]);
     }
@@ -214,7 +214,7 @@ class HotelsConnector
 
         return $this->soapClient->getMeals($request)->meals;
     }
-    
+
     /**
      * Получение списка стран
      *
@@ -247,11 +247,11 @@ class HotelsConnector
     /**
      * Поиск предложений
      *
-     * @param string                         $arrivalDate
-     * @param string                         $departureDate
-     * @param string                         $cityId
+     * @param string $arrivalDate
+     * @param string $departureDate
+     * @param string $cityId
      * @param Element\SearchOfferCriterion[] $searchCriteria
-     * @param null                           $hotelId
+     * @param null $hotelId
      * @return Element\HotelWithOffers[]
      */
     public function searchHotelOffers($arrivalDate, $departureDate, $cityId, $searchCriteria = [], $hotelId = null)
@@ -268,7 +268,7 @@ class HotelsConnector
         foreach ($searchCriteria as $criterian) {
             $request->addSearchCriteria($criterian);
         }
-        
+
         return $this->soapClient->searchHotelOffers($request)->getHotels();
     }
 
@@ -360,7 +360,7 @@ class HotelsConnector
     {
         $request = new Element\GetAmenitiesRequest();
         $this->fillRequest($request);
-        
+
         return $this->soapClient->getAmenities($request)->amenities;
     }
 

@@ -1,16 +1,17 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Правила аннуляции
- * 
+ *
  */
 abstract class CancellationPolicy
 {
     /**
      * Время наступления штрафных санкций.
      * Type: xsd:dateTime
-     * 
+     *
      * @var string
      */
     public $penaltyDateTime = null;
@@ -18,14 +19,14 @@ abstract class CancellationPolicy
     /**
      * Размер штрафа
      * Type: xsd:float
-     * 
+     *
      * @var float
      */
     public $penaltySum = null;
 
     /**
-     * 
-     * @param string $penaltyDateTime 
+     *
+     * @param string $penaltyDateTime
      */
     public function setPenaltyDateTime($penaltyDateTime)
     {
@@ -33,7 +34,7 @@ abstract class CancellationPolicy
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getPenaltyDateTime()
@@ -42,8 +43,8 @@ abstract class CancellationPolicy
     }
 
     /**
-     * 
-     * @param float $penaltySum 
+     *
+     * @param float $penaltySum
      */
     public function setPenaltySum($penaltySum)
     {
@@ -51,7 +52,7 @@ abstract class CancellationPolicy
     }
 
     /**
-     * 
+     *
      * @return float
      */
     public function getPenaltySum()

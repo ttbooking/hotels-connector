@@ -1,50 +1,51 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Запрос на создание заказа
- * 
+ *
  */
 class CreateOrderRequest extends BaseRequest
 {
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $contactPerson = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $contactEmail = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $contactPhone = null;
 
     /**
      * Type: xsd:string
-     * 
+     *
      * @var string
      */
     public $comment = null;
 
     /**
      * Type: tns:Service
-     * 
+     *
      * @var \Bronevik\HotelsConnector\Element\Service[]
      */
     public $services = [];
 
     /**
-     * 
-     * @param string $contactPerson 
+     *
+     * @param string $contactPerson
      */
     public function setContactPerson($contactPerson)
     {
@@ -52,7 +53,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getContactPerson()
@@ -61,8 +62,8 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param string $contactEmail 
+     *
+     * @param string $contactEmail
      */
     public function setContactEmail($contactEmail)
     {
@@ -70,7 +71,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getContactEmail()
@@ -79,8 +80,8 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param string $contactPhone 
+     *
+     * @param string $contactPhone
      */
     public function setContactPhone($contactPhone)
     {
@@ -88,7 +89,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getContactPhone()
@@ -97,8 +98,8 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param string $comment 
+     *
+     * @param string $comment
      */
     public function setComment($comment)
     {
@@ -106,7 +107,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return string
      */
     public function getComment()
@@ -115,7 +116,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function hasServices()
@@ -124,7 +125,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
+     *
      * @return \Bronevik\HotelsConnector\Element\Service[]
      */
     public function getServices()
@@ -133,8 +134,8 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     * 
-     * @param \Bronevik\HotelsConnector\Element\Service $services 
+     *
+     * @param \Bronevik\HotelsConnector\Element\Service $services
      */
     public function addServices($services)
     {
