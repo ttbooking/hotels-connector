@@ -145,7 +145,21 @@ class HotelsConnector
                     //update 2.0.3
                     'ServiceExtraField' => Element\ServiceExtraField::class,
                     'Tax' => Element\Tax::class,
-                    'OfferPolicy' => Element\OfferPolicy::class
+                    'OfferPolicy' => Element\OfferPolicy::class,
+                    //update 2.1.0
+                    'MealPriceDetails' => Element\MealPriceDetails::class,
+                    'AvailableMeals' => Element\AvailableMeals::class,
+                    'DailyPriceMeals' => Element\DailyPriceMeals::class,
+                    'DailyPrices' => Element\DailyPrices::class,
+                    'GetHotelOfferPricingRequest' => Element\GetHotelOfferPricingRequest::class,
+                    'GetHotelOfferPricingResponse' => Element\GetHotelOfferPricingResponse::class,
+                    'GetOrdersChangelogRequest' => Element\GetOrdersChangelogRequest::class,
+                    'GetOrdersChangelogResponse' => Element\GetOrdersChangelogResponse::class,
+                    'OrdersChangelogRecord' => Element\OrdersChangelogRecord::class,
+                    'ChangeList' => Element\ChangeList::class,
+                    'Change' => Element\Change::class,
+                    'RemoveOrdersChangelogRecordsRequest' => Element\RemoveOrdersChangelogRecordsRequest::class,
+                    'RemoveOrdersChangelogRecordsResponse' => Element\RemoveOrdersChangelogRecordsResponse::class,
                 ],
             ]);
     }
