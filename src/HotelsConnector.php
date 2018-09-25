@@ -22,6 +22,10 @@ class HotelsConnector
      * @var bool
      */
     protected $debugMode = false;
+    /**
+     * @var bool
+     */
+    protected $trace = true;
 
     /**
      * Данные авторизации
@@ -40,10 +44,12 @@ class HotelsConnector
     /**
      * @param string $endpoint
      * @param bool $debugMode
+     * @param bool $trace
      */
-    public function __construct($endpoint, $debugMode = false)
+    public function __construct($endpoint, $debugMode = false, $trace = true)
     {
         $this->debugMode = (bool)$debugMode;
+        $this->trace = (bool)$trace;
         $this->createSoapClient($endpoint);
     }
 
@@ -54,6 +60,11 @@ class HotelsConnector
     protected function isDebugMode()
     {
         return $this->debugMode;
+    }
+
+    protected function isTraceMode()
+    {
+        return $this->trace;
     }
 
     /**
@@ -67,7 +78,7 @@ class HotelsConnector
                 'location' => $endpoint,
                 'compression' => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_DEFLATE,
                 'cache_wsdl' => $this->isDebugMode() ? WSDL_CACHE_NONE : WSDL_CACHE_BOTH,
-                'trace' => $this->isDebugMode(),
+                'trace' => $this->isTraceMode(),
                 'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
                 'classmap' => [
                     'Amenity' => Element\Amenity::class,
