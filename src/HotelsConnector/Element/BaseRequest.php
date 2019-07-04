@@ -23,7 +23,7 @@ abstract class BaseRequest
      * The response language
      *
      * @see Languages
-     * @varstring
+     * @var string
      */
     public $language;
 
@@ -33,8 +33,7 @@ abstract class BaseRequest
     }
 
     /**
-     *
-      @param Credentials $credentials
+     * @param Credentials $credentials
      */
     public function setCredentials($credentials)
     {
@@ -42,8 +41,7 @@ abstract class BaseRequest
     }
 
     /**
-     *
-      @return Credentials
+     * @return Credentials
      */
     public function getCredentials()
     {
@@ -51,8 +49,7 @@ abstract class BaseRequest
     }
 
     /**
-     *
-      @param string $language
+     * @param string $language
      */
     public function setLanguage($language)
     {
@@ -60,7 +57,7 @@ abstract class BaseRequest
     }
 
     /**
-     *@return string
+     * @return string
      */
     public function getLanguage()
     {

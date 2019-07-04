@@ -18,8 +18,7 @@ class GetHotelInfoResponse extends BaseResponse
     }
 
     /**
-     *
-      @return HotelWithInfo[]
+     * @return HotelWithInfo[]
      */
     public function getHotels()
     {
@@ -27,8 +26,7 @@ class GetHotelInfoResponse extends BaseResponse
     }
 
     /**
-     *
-      @param HotelWithInfo $hotels
+     * @param HotelWithInfo $hotels
      */
     public function addHotels($hotels)
     {

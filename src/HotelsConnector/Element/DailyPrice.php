@@ -21,7 +21,7 @@ class DailyPrice
     public $rate;
 
     /**
-     *Стоимость брони в отеле
+     * Стоимость брони в отеле
      * The booking fee’s price detailing
      *
      * @var ClientPriceDetails

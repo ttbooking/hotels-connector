@@ -43,8 +43,7 @@ class PriceDetails
     }
 
     /**
-     *
-      @param boolean $vatApplicable
+     * @param boolean $vatApplicable
      */
     public function setVatApplicable($vatApplicable)
     {
@@ -60,8 +59,7 @@ class PriceDetails
     }
 
     /**
-     *
-      @param HotelPriceDetails $hotel
+     * @param HotelPriceDetails $hotel
      */
     public function setHotel($hotel)
     {
@@ -69,8 +67,7 @@ class PriceDetails
     }
 
     /**
-     *
-      @return HotelPriceDetails
+     * @return HotelPriceDetails
      */
     public function getHotel()
     {
@@ -78,8 +75,7 @@ class PriceDetails
     }
 
     /**
-     *
-      @param ClientPriceDetails $client
+     * @param ClientPriceDetails $client
      */
     public function setClient($client)
     {
@@ -87,8 +83,7 @@ class PriceDetails
     }
 
     /**
-     *
-      @return ClientPriceDetails
+     * @return ClientPriceDetails
      */
     public function getClient()
     {
@@ -104,8 +99,7 @@ class PriceDetails
     }
 
     /**
-     *
-      @return NamedDetailedPrice[]
+     * @return NamedDetailedPrice[]
      */
     public function getExtra()
     {
@@ -113,8 +107,7 @@ class PriceDetails
     }
 
     /**
-     *
-      @param NamedDetailedPrice $extra
+     * @param NamedDetailedPrice $extra
      */
     public function addExtra($extra)
     {

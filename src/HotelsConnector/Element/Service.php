@@ -13,7 +13,7 @@ abstract class Service
     public $referenceId;
 
     /**
-     *Список доп. полей для создания услуг
+     * Список доп. полей для создания услуг
      * The list of extra fields for the services
      *
      * @var ServiceExtraField[]

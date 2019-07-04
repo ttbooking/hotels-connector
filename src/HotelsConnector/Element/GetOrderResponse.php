@@ -15,8 +15,7 @@ class GetOrderResponse extends BaseResponse
     }
 
     /**
-     *
-      @param Order $order
+     * @param Order $order
      */
     public function setOrder($order)
     {
@@ -24,8 +23,7 @@ class GetOrderResponse extends BaseResponse
     }
 
     /**
-     *
-      @return Order
+     * @return Order
      */
     public function getOrder()
     {

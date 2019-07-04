@@ -10,8 +10,7 @@ class PingResponse extends BaseResponse
     public $data;
 
     /**
-     *
-      @param string $data
+     * @param string $data
      */
     public function setData($data)
     {

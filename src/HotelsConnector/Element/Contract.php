@@ -29,7 +29,7 @@ class Contract
     public $beginsAt;
 
     /**
-     *Юридическое лицо
+     * Юридическое лицо
      * Legal entity
      *
      * @var string
@@ -53,8 +53,7 @@ class Contract
     }
 
     /**
-     *
-      @param string $number
+     * @param string $number
      */
     public function setNumber($number)
     {
@@ -70,8 +69,7 @@ class Contract
     }
 
     /**
-     *
-      @param string $beginsAt
+     * @param string $beginsAt
      */
     public function setBeginsAt($beginsAt)
     {
@@ -79,8 +77,7 @@ class Contract
     }
 
     /**
-     *
-      @return string
+     * @return string
      */
     public function getBeginsAt()
     {

@@ -4,7 +4,7 @@ namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Описание номера отеля
- *The hotel room description
+ * The hotel room description
  */
 class HotelRoom
 {
@@ -43,7 +43,7 @@ class HotelRoom
     public $photos = [];
 
     /**
-     *Количество гостей, которых можно разместить в номере
+     * Количество гостей, которых можно разместить в номере
      * An amount of guests that can be accommodated in the room
      *
      * @var int
@@ -88,8 +88,7 @@ class HotelRoom
     }
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -113,8 +112,7 @@ class HotelRoom
     }
 
     /**
-     *
-      @return AvailableAmenity[]
+     * @return AvailableAmenity[]
      */
     public function getAvailableAmenities()
     {
@@ -122,8 +120,7 @@ class HotelRoom
     }
 
     /**
-     *
-      @param AvailableAmenity $availableAmenities
+     * @param AvailableAmenity $availableAmenities
      */
     public function addAvailableAmenities($availableAmenities)
     {
@@ -131,8 +128,7 @@ class HotelRoom
     }
 
     /**
-     *
-      @param string $description
+     * @param string $description
      */
     public function setDescription($description)
     {
@@ -156,8 +152,7 @@ class HotelRoom
     }
 
     /**
-     *
-      @return Image[]
+     * @return Image[]
      */
     public function getPhotos()
     {
@@ -165,8 +160,7 @@ class HotelRoom
     }
 
     /**
-     *
-      @param Image $photos
+     * @param Image $photos
      */
     public function addPhotos($photos)
     {

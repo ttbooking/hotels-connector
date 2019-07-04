@@ -29,8 +29,7 @@ class Country
     public $code;
 
     /**
-     *
-      @param int $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -46,8 +45,7 @@ class Country
     }
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -63,8 +61,7 @@ class Country
     }
 
     /**
-     *
-      @param string $code
+     * @param string $code
      */
     public function setCode($code)
     {

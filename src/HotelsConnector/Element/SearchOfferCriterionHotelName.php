@@ -13,8 +13,7 @@ class SearchOfferCriterionHotelName extends SearchOfferCriterion
     public $name;
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -22,7 +21,6 @@ class SearchOfferCriterionHotelName extends SearchOfferCriterion
     }
 
     /**
-     *
      * @return string
      */
     public function getName()

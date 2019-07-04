@@ -4,7 +4,7 @@ namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Правила аннуляции
- *A cancellation policy
+ * A cancellation policy
  */
 abstract class CancellationPolicy
 {
@@ -25,8 +25,7 @@ abstract class CancellationPolicy
     public $penaltySum;
 
     /**
-     *
-      @param string $penaltyDateTime
+     * @param string $penaltyDateTime
      */
     public function setPenaltyDateTime($penaltyDateTime)
     {
@@ -42,8 +41,7 @@ abstract class CancellationPolicy
     }
 
     /**
-     *
-      @param float $penaltySum
+     * @param float $penaltySum
      */
     public function setPenaltySum($penaltySum)
     {

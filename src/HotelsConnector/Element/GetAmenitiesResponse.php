@@ -18,8 +18,7 @@ class GetAmenitiesResponse extends BaseResponse
     }
 
     /**
-     *
-      @return Amenity[]
+     * @return Amenity[]
      */
     public function getAmenities()
     {
@@ -27,8 +26,7 @@ class GetAmenitiesResponse extends BaseResponse
     }
 
     /**
-     *
-      @param Amenity $amenities
+     * @param Amenity $amenities
      */
     public function addAmenities($amenities)
     {

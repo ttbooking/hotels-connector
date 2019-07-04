@@ -124,7 +124,7 @@ class Hotel
     public $informationForGuest;
 
     /**
-     *Дополнительная информация
+     * Дополнительная информация
      * Additional info
      *
      * @var AdditionalInfo
@@ -139,8 +139,7 @@ class Hotel
     }
 
     /**
-     *
-      @param int $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -148,8 +147,7 @@ class Hotel
     }
 
     /**
-     *
-      @return int
+     * @return int
      */
     public function getId()
     {
@@ -157,8 +155,7 @@ class Hotel
     }
 
     /**
-     *
-      @param int $cityId
+     * @param int $cityId
      */
     public function setCityId($cityId)
     {
@@ -166,8 +163,7 @@ class Hotel
     }
 
     /**
-     *
-      @return int
+     * @return int
      */
     public function getCityId()
     {
@@ -175,7 +171,7 @@ class Hotel
     }
 
     /**
-     *@param string $cityName
+     * @param string $cityName
      */
     public function setCityName($cityName)
     {
@@ -207,8 +203,7 @@ class Hotel
     }
 
     /**
-     *
-      @param string $address
+     * @param string $address
      */
     public function setAddress($address)
     {
@@ -224,8 +219,7 @@ class Hotel
     }
 
     /**
-     *
-      @param string $checkinTime
+     * @param string $checkinTime
      */
     public function setCheckinTime($checkinTime)
     {
@@ -241,8 +235,7 @@ class Hotel
     }
 
     /**
-     *
-      @param string $checkoutTime
+     * @param string $checkoutTime
      */
     public function setCheckoutTime($checkoutTime)
     {
@@ -258,7 +251,7 @@ class Hotel
     }
 
     /**
-     *@param boolean $isFixedCheckinTime
+     * @param boolean $isFixedCheckinTime
      */
     public function setIsFixedCheckinTime($isFixedCheckinTime)
     {
@@ -274,8 +267,7 @@ class Hotel
     }
 
     /**
-     *
-     @param DescriptionDetails $descriptionDetails
+     * @param DescriptionDetails $descriptionDetails
      */
     public function setDescriptionDetails($descriptionDetails)
     {
@@ -283,7 +275,7 @@ class Hotel
     }
 
     /**
-     *@return DescriptionDetails
+     * @return DescriptionDetails
      */
     public function getDescriptionDetails()
     {
@@ -307,8 +299,7 @@ class Hotel
     }
 
     /**
-     *
-      @param boolean $hasTaxes
+     * @param boolean $hasTaxes
      */
     public function setHasTaxes($hasTaxes)
     {
@@ -332,8 +323,7 @@ class Hotel
     }
 
     /**
-     *
-      @return HotelAmenity[]
+     * @return HotelAmenity[]
      */
     public function getAmenities()
     {
@@ -341,8 +331,7 @@ class Hotel
     }
 
     /**
-     *
-      @param HotelAmenity $amenities
+     * @param HotelAmenity $amenities
      */
     public function addAmenities($amenities)
     {
@@ -350,8 +339,7 @@ class Hotel
     }
 
     /**
-     *
-      @param int $category
+     * @param int $category
      */
     public function setCategory($category)
     {
@@ -367,8 +355,7 @@ class Hotel
     }
 
     /**
-     *
-      @param string $type
+     * @param string $type
      */
     public function setType($type)
     {
@@ -384,8 +371,7 @@ class Hotel
     }
 
     /**
-     *
-      @param InformationForGuest $informationForGuest
+     * @param InformationForGuest $informationForGuest
      */
     public function setInformationForGuest($informationForGuest)
     {
@@ -393,16 +379,14 @@ class Hotel
     }
 
     /**
-     *
-      @return InformationForGuest
+     * @return InformationForGuest
      */
     public function getInformationForGuest()
     {
         return $this->informationForGuest;
     }
 
-
-/**
+    /**
      * @param AdditionalInfo $additionalInfo
      */
     public function setAdditionalInfo($additionalInfo)

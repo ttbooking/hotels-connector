@@ -8,7 +8,7 @@ abstract class OrderService
      * Идентификатор услуги
      * The service id
      *
-     * @varint
+     * @var int
      */
     public $id;
 
@@ -98,8 +98,7 @@ abstract class OrderService
     }
 
     /**
-     *
-      @param int $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -115,8 +114,7 @@ abstract class OrderService
     }
 
     /**
-     *
-      @param string $date
+     * @param string $date
      */
     public function setDate($date)
     {
@@ -132,8 +130,7 @@ abstract class OrderService
     }
 
     /**
-     *
-      @param string $referenceId
+     * @param string $referenceId
      */
     public function setReferenceId($referenceId)
     {
@@ -221,8 +218,7 @@ abstract class OrderService
     }
 
     /**
-     *
-      @return PriceDetails
+     * @return PriceDetails
      */
     public function getPriceDetails()
     {
@@ -238,8 +234,7 @@ abstract class OrderService
     }
 
     /**
-     *
-      @return CancellationPolicy[]
+     * @return CancellationPolicy[]
      */
     public function getCancellationPolicies()
     {
@@ -247,8 +242,7 @@ abstract class OrderService
     }
 
     /**
-     *
-      @param CancellationPolicy $cancellationPolicies
+     * @param CancellationPolicy $cancellationPolicies
      */
     public function addCancellationPolicies($cancellationPolicies)
     {
@@ -256,8 +250,7 @@ abstract class OrderService
     }
 
     /**
-     *
-      @param int $statusId
+     * @param int $statusId
      */
     public function setStatusId($statusId)
     {
@@ -273,8 +266,7 @@ abstract class OrderService
     }
 
     /**
-     *
-      @param string $statusName
+     * @param string $statusName
      */
     public function setStatusName($statusName)
     {

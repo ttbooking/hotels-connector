@@ -133,7 +133,7 @@ class OrderServiceAccommodation extends OrderService
     public $meals = [];
 
     /**
-     *Правила предоставления заказа
+     * Правила предоставления заказа
      * A policies of granting current offer
      *
      * @var OfferPolicy[]
@@ -153,12 +153,10 @@ class OrderServiceAccommodation extends OrderService
         parent::__construct();
         $this->contract    = new Contract();
         $this->dailyPrices = new DailyPrices();
-        parent::__construct();
     }
 
     /**
-     *
-      @param Contract $contract
+     * @param Contract $contract
      */
     public function setContract($contract)
     {
@@ -166,8 +164,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @return Contract
+     * @return Contract
      */
     public function getContract()
     {
@@ -175,8 +172,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param string $offerCode
+     * @param string $offerCode
      */
     public function setOfferCode($offerCode)
     {
@@ -192,8 +188,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param string $offerName
+     * @param string $offerName
      */
     public function setOfferName($offerName)
     {
@@ -209,8 +204,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param int $hotelId
+     * @param int $hotelId
      */
     public function setHotelId($hotelId)
     {
@@ -218,8 +212,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @return int
+     * @return int
      */
     public function getHotelId()
     {
@@ -227,8 +220,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param string $hotelName
+     * @param string $hotelName
      */
     public function setHotelName($hotelName)
     {
@@ -244,8 +236,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param int $roomId
+     * @param int $roomId
      */
     public function setRoomId($roomId)
     {
@@ -261,8 +252,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param string $roomType
+     * @param string $roomType
      */
     public function setRoomType($roomType)
     {
@@ -278,8 +268,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param string $checkin
+     * @param string $checkin
      */
     public function setCheckin($checkin)
     {
@@ -295,8 +284,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param string $checkout
+     * @param string $checkout
      */
     public function setCheckout($checkout)
     {
@@ -328,8 +316,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param string $guests
+     * @param string $guests
      */
     public function addGuests($guests)
     {
@@ -337,8 +324,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param string $comment
+     * @param string $comment
      */
     public function setComment($comment)
     {
@@ -354,8 +340,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param boolean $nonRefundable
+     * @param boolean $nonRefundable
      */
     public function setNonRefundable($nonRefundable)
     {
@@ -371,8 +356,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param boolean $isBlockRoom
+     * @param boolean $isBlockRoom
      */
     public function setIsBlockRoom($isBlockRoom)
     {
@@ -388,8 +372,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param string $paymentRecipient
+     * @param string $paymentRecipient
      */
     public function setPaymentRecipient($paymentRecipient)
     {
@@ -405,7 +388,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *@return bool
+     * @return bool
      */
     public function hasExtraField()
     {
@@ -437,8 +420,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @return AvailableMeal[]
+     * @return AvailableMeal[]
      */
     public function getMeals()
     {
@@ -446,8 +428,7 @@ class OrderServiceAccommodation extends OrderService
     }
 
     /**
-     *
-      @param AvailableMeal $meals
+     * @param AvailableMeal $meals
      */
     public function addMeals($meals)
     {

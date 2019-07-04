@@ -19,8 +19,7 @@ class SearchHotelOffersResponse extends BaseResponse
     }
 
     /**
-     *
-     @param Hotels $hotels
+     * @param Hotels $hotels
      */
     public function setHotels($hotels)
     {
@@ -28,8 +27,7 @@ class SearchHotelOffersResponse extends BaseResponse
     }
 
     /**
-     *
-      @return Hotels
+     * @return Hotels
      */
     public function getHotels()
     {

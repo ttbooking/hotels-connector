@@ -13,8 +13,7 @@ class CancelOrderResponse extends BaseResponse
     public $result;
 
     /**
-     *
-      @param boolean $result
+     * @param boolean $result
      */
     public function setResult($result)
     {

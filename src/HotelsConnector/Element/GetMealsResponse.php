@@ -18,8 +18,7 @@ class GetMealsResponse extends BaseResponse
     }
 
     /**
-     *
-      @return Meal[]
+     * @return Meal[]
      */
     public function getMeals()
     {
@@ -27,8 +26,7 @@ class GetMealsResponse extends BaseResponse
     }
 
     /**
-     *
-      @param Meal $meals
+     * @param Meal $meals
      */
     public function addMeals($meals)
     {

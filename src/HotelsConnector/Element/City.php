@@ -53,8 +53,7 @@ class City
     public $regionName;
 
     /**
-     *
-      @param int $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -70,8 +69,7 @@ class City
     }
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -87,8 +85,7 @@ class City
     }
 
     /**
-     *
-      @param string $latitude
+     * @param string $latitude
      */
     public function setLatitude($latitude)
     {
@@ -104,8 +101,7 @@ class City
     }
 
     /**
-     *
-      @param string $longitude
+     * @param string $longitude
      */
     public function setLongitude($longitude)
     {
@@ -121,8 +117,7 @@ class City
     }
 
     /**
-     *
-      @param int $regionId
+     * @param int $regionId
      */
     public function setRegionId($regionId)
     {
@@ -138,8 +133,7 @@ class City
     }
 
     /**
-     *
-      @param string $regionName
+     * @param string $regionName
      */
     public function setRegionName($regionName)
     {

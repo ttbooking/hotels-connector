@@ -22,8 +22,7 @@ class HotelWithInfo extends Hotel
     }
 
     /**
-     *
-      @return HotelRoom[]
+     * @return HotelRoom[]
      */
     public function getRooms()
     {
@@ -31,8 +30,7 @@ class HotelWithInfo extends Hotel
     }
 
     /**
-     *
-      @param HotelRoom $rooms
+     * @param HotelRoom $rooms
      */
     public function addRooms($rooms)
     {

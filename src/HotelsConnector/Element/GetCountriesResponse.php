@@ -18,8 +18,7 @@ class GetCountriesResponse extends BaseResponse
     }
 
     /**
-     *
-      @return Country[]
+     * @return Country[]
      */
     public function getCountries()
     {
@@ -27,8 +26,7 @@ class GetCountriesResponse extends BaseResponse
     }
 
     /**
-     *
-      @param Country $countries
+     * @param Country $countries
      */
     public function addCountries($countries)
     {

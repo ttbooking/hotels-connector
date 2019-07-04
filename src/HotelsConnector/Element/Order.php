@@ -53,8 +53,7 @@ class Order
     public $services = [];
 
     /**
-     *
-      @param int $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -70,8 +69,7 @@ class Order
     }
 
     /**
-     *
-      @param string $contactPhone
+     * @param string $contactPhone
      */
     public function setContactPhone($contactPhone)
     {
@@ -87,8 +85,7 @@ class Order
     }
 
     /**
-     *
-      @param string $contactPerson
+     * @param string $contactPerson
      */
     public function setContactPerson($contactPerson)
     {
@@ -104,8 +101,7 @@ class Order
     }
 
     /**
-     *
-      @param string $contactEmail
+     * @param string $contactEmail
      */
     public function setContactEmail($contactEmail)
     {
@@ -121,8 +117,7 @@ class Order
     }
 
     /**
-     *
-      @param string $comment
+     * @param string $comment
      */
     public function setComment($comment)
     {
@@ -146,8 +141,7 @@ class Order
     }
 
     /**
-     *
-      @return OrderService[]
+     * @return OrderService[]
      */
     public function getServices()
     {
@@ -155,8 +149,7 @@ class Order
     }
 
     /**
-     *
-      @param OrderService $services
+     * @param OrderService $services
      */
     public function addServices($services)
     {

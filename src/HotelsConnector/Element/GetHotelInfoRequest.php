@@ -26,8 +26,7 @@ class GetHotelInfoRequest extends BaseRequest
     }
 
     /**
-     *
-      @param int $hotelId
+     * @param int $hotelId
      */
     public function addHotelId($hotelId)
     {

@@ -23,8 +23,7 @@ class SearchOrderCriterionCreateDate extends SearchOrderCriterion
     public $dateEnd;
 
     /**
-     *
-      @param string $dateStart
+     * @param string $dateStart
      */
     public function setDateStart($dateStart)
     {
@@ -32,8 +31,7 @@ class SearchOrderCriterionCreateDate extends SearchOrderCriterion
     }
 
     /**
-     *
-      @return string
+     * @return string
      */
     public function getDateStart()
     {
@@ -41,8 +39,7 @@ class SearchOrderCriterionCreateDate extends SearchOrderCriterion
     }
 
     /**
-     *
-      @param string $dateEnd
+     * @param string $dateEnd
      */
     public function setDateEnd($dateEnd)
     {
@@ -50,8 +47,7 @@ class SearchOrderCriterionCreateDate extends SearchOrderCriterion
     }
 
     /**
-     *
-      @return string
+     * @return string
      */
     public function getDateEnd()
     {

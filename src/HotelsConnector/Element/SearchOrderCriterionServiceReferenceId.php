@@ -14,8 +14,7 @@ class SearchOrderCriterionServiceReferenceId extends SearchOrderCriterion
     public $referenceId;
 
     /**
-     *
-      @param string $referenceId
+     * @param string $referenceId
      */
     public function setReferenceId($referenceId)
     {

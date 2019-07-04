@@ -29,8 +29,7 @@ class BreakfastInfo
     public $included;
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -46,8 +45,7 @@ class BreakfastInfo
     }
 
     /**
-     *
-      @param float $price
+     * @param float $price
      */
     public function setPrice($price)
     {
@@ -55,8 +53,7 @@ class BreakfastInfo
     }
 
     /**
-     *
-      @return float
+     * @return float
      */
     public function getPrice()
     {
@@ -64,8 +61,7 @@ class BreakfastInfo
     }
 
     /**
-     *
-      @param boolean $included
+     * @param boolean $included
      */
     public function setIncluded($included)
     {

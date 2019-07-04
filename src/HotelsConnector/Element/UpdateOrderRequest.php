@@ -16,8 +16,7 @@ class UpdateOrderRequest extends BaseRequest
     }
 
     /**
-     *
-      @param Order $order
+     * @param Order $order
      */
     public function setOrder($order)
     {
@@ -25,8 +24,7 @@ class UpdateOrderRequest extends BaseRequest
     }
 
     /**
-     *
-      @return Order
+     * @return Order
      */
     public function getOrder()
     {

@@ -18,8 +18,7 @@ class GetHotelOfferResponse extends BaseResponse
     }
 
     /**
-     *
-      @return HotelOffer[]
+     * @return HotelOffer[]
      */
     public function getOffer()
     {
@@ -27,8 +26,7 @@ class GetHotelOfferResponse extends BaseResponse
     }
 
     /**
-     *
-      @param HotelOffer $offer
+     * @param HotelOffer $offer
      */
     public function addOffer($offer)
     {

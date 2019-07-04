@@ -14,8 +14,7 @@ class SearchOrderCriterionServiceId extends SearchOrderCriterion
     public $serviceId;
 
     /**
-     *
-      @param int $serviceId
+     * @param int $serviceId
      */
     public function setServiceId($serviceId)
     {

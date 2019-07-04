@@ -159,7 +159,7 @@ class HotelOffer
     public $meals;
 
     /**
-     *Правила предоставления предложения
+     * Правила предоставления предложения
      * A policies of granting current offer
      *
      * @var OfferPolicy[]
@@ -174,8 +174,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param string $code
+     * @param string $code
      */
     public function setCode($code)
     {
@@ -191,8 +190,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -208,8 +206,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param boolean $lhp
+     * @param boolean $lhp
      */
     public function setLhp($lhp)
     {
@@ -225,8 +222,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param boolean $nonRefundable
+     * @param boolean $nonRefundable
      */
     public function setNonRefundable($nonRefundable)
     {
@@ -242,8 +238,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param PriceDetails $priceDetails
+     * @param PriceDetails $priceDetails
      */
     public function setPriceDetails($priceDetails)
     {
@@ -251,8 +246,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @return PriceDetails
+     * @return PriceDetails
      */
     public function getPriceDetails()
     {
@@ -316,8 +310,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param int $freeRooms
+     * @param int $freeRooms
      */
     public function setFreeRooms($freeRooms)
     {
@@ -341,8 +334,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @return HotelOfferCancellationPolicy[]
+     * @return HotelOfferCancellationPolicy[]
      */
     public function getCancellationPolicies()
     {
@@ -350,8 +342,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param HotelOfferCancellationPolicy $cancellationPolicies
+     * @param HotelOfferCancellationPolicy $cancellationPolicies
      */
     public function addCancellationPolicies($cancellationPolicies)
     {
@@ -359,8 +350,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param int $roomId
+     * @param int $roomId
      */
     public function setRoomId($roomId)
     {
@@ -376,8 +366,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param int $roomCapacity
+     * @param int $roomCapacity
      */
     public function setRoomCapacity($roomCapacity)
     {
@@ -393,8 +382,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param string $roomType
+     * @param string $roomType
      */
     public function setRoomType($roomType)
     {
@@ -410,8 +398,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param boolean $isSharedRoom
+     * @param boolean $isSharedRoom
      */
     public function setIsSharedRoom($isSharedRoom)
     {
@@ -427,8 +414,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param boolean $isBlockRoom
+     * @param boolean $isBlockRoom
      */
     public function setIsBlockRoom($isBlockRoom)
     {
@@ -444,8 +430,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param string $paymentRecipient
+     * @param string $paymentRecipient
      */
     public function setPaymentRecipient($paymentRecipient)
     {
@@ -461,7 +446,7 @@ class HotelOffer
     }
 
     /**
-     *@param string $deepLink
+     * @param string $deepLink
      */
     public function setDeepLink($deepLink)
     {
@@ -477,7 +462,7 @@ class HotelOffer
     }
 
     /**
-     *@param DailyPrices $dailyPrices
+     * @param DailyPrices $dailyPrices
      */
     public function setDailyPrices($dailyPrices)
     {
@@ -493,8 +478,7 @@ class HotelOffer
     }
 
     /**
-     *
-     @return AvailableMeals
+     * @return AvailableMeals
      */
     public function getMeals()
     {
@@ -502,8 +486,7 @@ class HotelOffer
     }
 
     /**
-     *
-      @param AvailableMeals $meals
+     * @param AvailableMeals $meals
      */
     public function setMeals($meals)
     {

@@ -25,8 +25,7 @@ class HotelAmenity
     public $type;
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -42,8 +41,7 @@ class HotelAmenity
     }
 
     /**
-     *
-      @param string $type
+     * @param string $type
      */
     public function setType($type)
     {

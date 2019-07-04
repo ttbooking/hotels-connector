@@ -48,7 +48,7 @@ class ServiceAccommodation extends Service
      * Желаемое время выезда
      * The desired date of check-out
      *
-     * @varint
+     * @var int
      */
     public $checkoutHour;
 
@@ -61,8 +61,7 @@ class ServiceAccommodation extends Service
     public $meals = [];
 
     /**
-     *
-      @param string $offerCode
+     * @param string $offerCode
      */
     public function setOfferCode($offerCode)
     {
@@ -94,8 +93,7 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     *
-      @param string $guests
+     * @param string $guests
      */
     public function addGuests($guests)
     {
@@ -103,8 +101,7 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     *
-      @param string $comment
+     * @param string $comment
      */
     public function setComment($comment)
     {

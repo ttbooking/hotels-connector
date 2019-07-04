@@ -45,8 +45,7 @@ class ClientPriceDetails
     }
 
     /**
-     *
-      @param boolean $vatIncluded
+     * @param boolean $vatIncluded
      */
     public function setVatIncluded($vatIncluded)
     {
@@ -62,8 +61,7 @@ class ClientPriceDetails
     }
 
     /**
-     *
-      @param DetailedPrice $commission
+     * @param DetailedPrice $commission
      */
     public function setCommission($commission)
     {

@@ -14,8 +14,7 @@ class SearchOrderCriterionGuest extends SearchOrderCriterion
     public $name;
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {

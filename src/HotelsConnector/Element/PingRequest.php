@@ -13,8 +13,7 @@ class PingRequest extends BaseRequest
     public $data;
 
     /**
-     *
-      @param string $data
+     * @param string $data
      */
     public function setData($data)
     {

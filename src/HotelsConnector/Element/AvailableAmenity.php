@@ -29,8 +29,7 @@ class AvailableAmenity
     public $included;
 
     /**
-     *
-      @param int $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -46,8 +45,7 @@ class AvailableAmenity
     }
 
     /**
-     *
-      @param float $price
+     * @param float $price
      */
     public function setPrice($price)
     {
@@ -63,8 +61,7 @@ class AvailableAmenity
     }
 
     /**
-     *
-      @param boolean $included
+     * @param boolean $included
      */
     public function setIncluded($included)
     {

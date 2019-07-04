@@ -19,8 +19,7 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
     public $dateEnd;
 
     /**
-     *
-      @param string $dateStart
+     * @param string $dateStart
      */
     public function setDateStart($dateStart)
     {
@@ -28,8 +27,7 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
     }
 
     /**
-     *
-      @return string
+     * @return string
      */
     public function getDateStart()
     {
@@ -37,8 +35,7 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
     }
 
     /**
-     *
-      @param string $dateEnd
+     * @param string $dateEnd
      */
     public function setDateEnd($dateEnd)
     {
@@ -46,8 +43,7 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
     }
 
     /**
-     *
-      @return string
+     * @return string
      */
     public function getDateEnd()
     {

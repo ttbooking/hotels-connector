@@ -18,8 +18,7 @@ class SearchOrdersRequest extends BaseRequest
     }
 
     /**
-     *
-      @return SearchOrderCriterion[]
+     * @return SearchOrderCriterion[]
      */
     public function getSearchCriteria()
     {
@@ -27,8 +26,7 @@ class SearchOrdersRequest extends BaseRequest
     }
 
     /**
-     *
-      @param SearchOrderCriterion $searchCriteria
+     * @param SearchOrderCriterion $searchCriteria
      */
     public function addSearchCriteria($searchCriteria)
     {

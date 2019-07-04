@@ -29,8 +29,7 @@ class Amenity
     public $groupName;
 
     /**
-     *
-      @param int $id
+     * @param int $id
      */
     public function setId($id)
     {
@@ -46,8 +45,7 @@ class Amenity
     }
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -63,8 +61,7 @@ class Amenity
     }
 
     /**
-     *
-      @param string $groupName
+     * @param string $groupName
      */
     public function setGroupName($groupName)
     {

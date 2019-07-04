@@ -13,8 +13,7 @@ class HotelPriceDetails
     public $vatIncluded;
 
     /**
-     *
-      @param boolean $vatIncluded
+     * @param boolean $vatIncluded
      */
     public function setVatIncluded($vatIncluded)
     {

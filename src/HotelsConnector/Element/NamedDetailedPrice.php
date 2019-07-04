@@ -13,8 +13,7 @@ class NamedDetailedPrice extends DetailedPrice
     public $name;
 
     /**
-     *
-      @param string $name
+     * @param string $name
      */
     public function setName($name)
     {

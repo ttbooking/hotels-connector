@@ -18,8 +18,7 @@ class GetCitiesResponse extends BaseResponse
     }
 
     /**
-     *
-      @return City[]
+     * @return City[]
      */
     public function getCities()
     {
@@ -27,8 +26,7 @@ class GetCitiesResponse extends BaseResponse
     }
 
     /**
-     *
-      @param City $cities
+     * @param City $cities
      */
     public function addCities($cities)
     {

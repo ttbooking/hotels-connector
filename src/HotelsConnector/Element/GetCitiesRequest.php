@@ -10,8 +10,7 @@ class GetCitiesRequest extends BaseRequest
     public $countryId;
 
     /**
-     *
-      @param int $countryId
+     * @param int $countryId
      */
     public function setCountryId($countryId)
     {

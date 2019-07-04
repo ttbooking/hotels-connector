@@ -15,8 +15,7 @@ class Image
     public $url;
 
     /**
-     *
-      @param string $guid
+     * @param string $guid
      */
     public function setGuid($guid)
     {
@@ -32,8 +31,7 @@ class Image
     }
 
     /**
-     *
-      @param string $url
+     * @param string $url
      */
     public function setUrl($url)
     {

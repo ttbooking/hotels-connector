@@ -4,7 +4,7 @@ namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Ответ на запрос по созданию заказа
- *The response for create the order
+ * The response for create the order
  */
 class CreateOrderResponse extends BaseResponse
 {
@@ -19,8 +19,7 @@ class CreateOrderResponse extends BaseResponse
     }
 
     /**
-     *
-      @param Order $order
+     * @param Order $order
      */
     public function setOrder($order)
     {
@@ -28,8 +27,7 @@ class CreateOrderResponse extends BaseResponse
     }
 
     /**
-     *
-      @return Order
+     * @return Order
      */
     public function getOrder()
     {

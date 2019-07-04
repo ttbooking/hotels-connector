@@ -13,8 +13,7 @@ class InformationForGuest
     public $comment;
 
     /**
-     *
-      @param string $comment
+     * @param string $comment
      */
     public function setComment($comment)
     {

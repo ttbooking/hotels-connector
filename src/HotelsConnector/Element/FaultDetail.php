@@ -18,8 +18,7 @@ class FaultDetail
     public $code;
 
     /**
-     *
-      @param string $traceId
+     * @param string $traceId
      */
     public function setTraceId($traceId)
     {

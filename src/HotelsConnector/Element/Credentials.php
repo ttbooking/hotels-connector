@@ -29,8 +29,7 @@ class Credentials
     public $password;
 
     /**
-     *
-      @param string $clientKey
+     * @param string $clientKey
      */
     public function setClientKey($clientKey)
     {
@@ -46,8 +45,7 @@ class Credentials
     }
 
     /**
-     *
-      @param string $login
+     * @param string $login
      */
     public function setLogin($login)
     {
@@ -63,8 +61,7 @@ class Credentials
     }
 
     /**
-     *
-      @param string $password
+     * @param string $password
      */
     public function setPassword($password)
     {

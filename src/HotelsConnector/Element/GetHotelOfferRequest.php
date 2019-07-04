@@ -10,7 +10,7 @@ class GetHotelOfferRequest extends BaseRequest
     public $offerCode = [];
 
     /**
-     *@see SkipElementTypes::$availableSkipElementsForGetHotelOffer
+     * @see SkipElementTypes::$availableSkipElementsForGetHotelOffer
      * @var SkipElements
      */
     public $skipElements;
@@ -32,8 +32,7 @@ class GetHotelOfferRequest extends BaseRequest
     }
 
     /**
-     *
-      @param string $offerCode
+     * @param string $offerCode
      */
     public function addOfferCode($offerCode)
     {

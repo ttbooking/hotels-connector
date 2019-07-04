@@ -4,7 +4,7 @@ namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Критерий поиска отеля по категории
- *The criterion by hotel star rating
+ * The criterion by hotel star rating
  */
 class SearchOfferCriterionHotelCategory extends SearchOfferCriterion
 {
@@ -33,8 +33,7 @@ class SearchOfferCriterionHotelCategory extends SearchOfferCriterion
     }
 
     /**
-     *
-      @param int $category
+     * @param int $category
      */
     public function addCategory($category)
     {

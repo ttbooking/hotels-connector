@@ -14,8 +14,7 @@ class SearchOrderCriterionOrderId extends SearchOrderCriterion
     public $orderId;
 
     /**
-     *
-      @param int $orderId
+     * @param int $orderId
      */
     public function setOrderId($orderId)
     {
@@ -23,8 +22,7 @@ class SearchOrderCriterionOrderId extends SearchOrderCriterion
     }
 
     /**
-     *
-      @return int
+     * @return int
      */
     public function getOrderId()
     {

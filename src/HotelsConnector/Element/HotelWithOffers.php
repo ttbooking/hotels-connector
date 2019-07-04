@@ -39,8 +39,7 @@ class HotelWithOffers extends Hotel
     }
 
     /**
-     *
-      @param boolean $vatIncluded
+     * @param boolean $vatIncluded
      */
     public function setVatIncluded($vatIncluded)
     {
@@ -56,8 +55,7 @@ class HotelWithOffers extends Hotel
     }
 
     /**
-     *
-      @param float $VATPercent
+     * @param float $VATPercent
      */
     public function setVATPercent($VATPercent)
     {
@@ -73,8 +71,7 @@ class HotelWithOffers extends Hotel
     }
 
     /**
-     *
-     @param HotelOffers $offers
+     * @param HotelOffers $offers
      */
     public function setOffers($offers)
     {
@@ -82,8 +79,7 @@ class HotelWithOffers extends Hotel
     }
 
     /**
-     *
-      @return HotelOffers
+     * @return HotelOffers
      */
     public function getOffers()
     {

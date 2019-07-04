@@ -4,7 +4,7 @@ namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Запрос на создание заказа
- *The request for create the order
+ * The request for create the order
  */
 class CreateOrderRequest extends BaseRequest
 {
@@ -49,8 +49,7 @@ class CreateOrderRequest extends BaseRequest
     public $services = [];
 
     /**
-     *
-      @param string $contactPerson
+     * @param string $contactPerson
      */
     public function setContactPerson($contactPerson)
     {
@@ -66,8 +65,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     *
-      @param string $contactEmail
+     * @param string $contactEmail
      */
     public function setContactEmail($contactEmail)
     {
@@ -83,8 +81,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     *
-      @param string $contactPhone
+     * @param string $contactPhone
      */
     public function setContactPhone($contactPhone)
     {
@@ -100,8 +97,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     *
-      @param string $comment
+     * @param string $comment
      */
     public function setComment($comment)
     {
@@ -125,8 +121,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     *
-      @return Service[]
+     * @return Service[]
      */
     public function getServices()
     {
@@ -134,8 +129,7 @@ class CreateOrderRequest extends BaseRequest
     }
 
     /**
-     *
-      @param Service $services
+     * @param Service $services
      */
     public function addServices($services)
     {

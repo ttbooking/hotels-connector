@@ -10,8 +10,7 @@ class CancelOrderRequest extends BaseRequest
     public $orderId;
 
     /**
-     *
-      @param int $orderId
+     * @param int $orderId
      */
     public function setOrderId($orderId)
     {

@@ -29,8 +29,7 @@ class DetailedPrice
     public $currency;
 
     /**
-     *
-      @param float $price
+     * @param float $price
      */
     public function setPrice($price)
     {
@@ -46,8 +45,7 @@ class DetailedPrice
     }
 
     /**
-     *
-      @param float $vatAmount
+     * @param float $vatAmount
      */
     public function setVatAmount($vatAmount)
     {
@@ -63,8 +61,7 @@ class DetailedPrice
     }
 
     /**
-     *
-      @param string $currency
+     * @param string $currency
      */
     public function setCurrency($currency)
     {

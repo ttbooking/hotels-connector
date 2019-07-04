@@ -18,8 +18,7 @@ class SearchOrdersResponse extends BaseResponse
     }
 
     /**
-     *
-      @return Order[]
+     * @return Order[]
      */
     public function getOrders()
     {
@@ -27,8 +26,7 @@ class SearchOrdersResponse extends BaseResponse
     }
 
     /**
-     *
-      @param Order $orders
+     * @param Order $orders
      */
     public function addOrders($orders)
     {

@@ -6,7 +6,7 @@ use Bronevik\HotelsConnector\Enum\SkipElementTypes;
 
 /**
  * Запрос на поиск предложений по определённому городу
- *The offers search by the city
+ * The offers search by the city
  */
 class SearchHotelOffersRequest extends BaseRequest
 {
@@ -68,7 +68,7 @@ class SearchHotelOffersRequest extends BaseRequest
     public $searchCriteria = [];
 
     /**
-     *@var bool
+     * @var bool
      */
     public $enableProfitShareRates = false;
 
@@ -95,8 +95,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     *
-      @param int $hotelId
+     * @param int $hotelId
      */
     public function setHotelId($hotelId)
     {
@@ -112,7 +111,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     *@param HotelIds $hotelIds
+     * @param HotelIds $hotelIds
      */
     public function setHotelIds($hotelIds)
     {
@@ -136,8 +135,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     *
-      @return string
+     * @return string
      */
     public function getArrivalDate()
     {
@@ -145,8 +143,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     *
-      @param string $departureDate
+     * @param string $departureDate
      */
     public function setDepartureDate($departureDate)
     {
@@ -154,8 +151,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     *
-      @return string
+     * @return string
      */
     public function getDepartureDate()
     {
@@ -163,8 +159,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     *
-      @param string $currency
+     * @param string $currency
      */
     public function setCurrency($currency)
     {
@@ -188,8 +183,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     *
-      @return SearchOfferCriterion[]
+     * @return SearchOfferCriterion[]
      */
     public function getSearchCriteria()
     {
@@ -197,8 +191,7 @@ class SearchHotelOffersRequest extends BaseRequest
     }
 
     /**
-     *
-      @param SearchOfferCriterion $searchCriteria
+     * @param SearchOfferCriterion $searchCriteria
      */
     public function addSearchCriteria($searchCriteria)
     {
