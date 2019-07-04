@@ -4,25 +4,28 @@ namespace Bronevik\HotelsConnector\Element;
 
 class ServiceExtraField
 {
+    /**
+     * Название дополнительного поля для услуги
+     * The service extra field name
+     *
+     * @var string
+     */
+    public $name;
 
     /**
-     * @var string $name
+     * Значение дополнительного поля
+     * The service extra field value
+     *
+     * @var string
      */
-    public $name = null;
-
-    /**
-     * @var string $value
-     */
-    public $value = null;
+    public $value;
 
     /**
      * @param string $name
-     * @param string $value
      */
-    public function __construct($name, $value)
+    public function setName($name)
     {
         $this->name = $name;
-        $this->value = $value;
     }
 
     /**
@@ -34,13 +37,11 @@ class ServiceExtraField
     }
 
     /**
-     * @param string $name
-     * @return ServiceExtraField
+     * @param string $value
      */
-    public function setName($name)
+    public function setValue($value)
     {
-        $this->name = $name;
-        return $this;
+        $this->value = $value;
     }
 
     /**
@@ -50,15 +51,4 @@ class ServiceExtraField
     {
         return $this->value;
     }
-
-    /**
-     * @param string $value
-     * @return ServiceExtraField
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
-        return $this;
-    }
-
 }

@@ -1,18 +1,20 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class AvailableMeals
 {
+    /**
+     * @var AvailableMeal[]
+     */
+    public $meal = [];
 
     /**
-     * @var AvailableMeal[] $meal
+     * @return bool
      */
-    protected $meal = null;
-
-    
-    public function __construct()
+    public function hasMeal()
     {
-    
+        return count($this->meal) > 0;
     }
 
     /**
@@ -20,17 +22,14 @@ class AvailableMeals
      */
     public function getMeal()
     {
-      return $this->meal;
+        return $this->meal;
     }
 
     /**
-     * @param AvailableMeal[] $meal
-     * @return AvailableMeals
+     * @param AvailableMeal $meal
      */
-    public function setMeal(array $meal = null)
+    public function addMeal($meal)
     {
-      $this->meal = $meal;
-      return $this;
+        $this->meal[] = $meal;
     }
-
 }

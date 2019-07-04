@@ -1,18 +1,23 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class DailyPriceMeals
 {
+    /**
+     * Детализированная информация о стоимости питания
+     * The detailed cost of paid meal service
+     *
+     * @var MealPriceDetails[]
+     */
+    public $meal = [];
 
     /**
-     * @var MealPriceDetails[] $meal
+     * @return bool
      */
-    protected $meal = null;
-
-    
-    public function __construct()
+    public function hasMeal()
     {
-    
+        return count($this->meal) > 0;
     }
 
     /**
@@ -20,17 +25,14 @@ class DailyPriceMeals
      */
     public function getMeal()
     {
-      return $this->meal;
+        return $this->meal;
     }
 
     /**
-     * @param MealPriceDetails[] $meal
-     * @return DailyPriceMeals
+     * @param MealPriceDetails $meal
      */
-    public function setMeal(array $meal = null)
+    public function addMeal($meal)
     {
-      $this->meal = $meal;
-      return $this;
+        $this->meal[] = $meal;
     }
-
 }

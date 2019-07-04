@@ -1,20 +1,20 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class ChangeList
 {
+    /**
+     * @var Change[]
+     */
+    public $change = [];
 
     /**
-     * @var Change[] $change
+     * @return bool
      */
-    protected $change = null;
-
-    /**
-     * @param Change[] $change
-     */
-    public function __construct(array $change)
+    public function hasChange()
     {
-      $this->change = $change;
+        return count($this->change) > 0;
     }
 
     /**
@@ -22,17 +22,14 @@ class ChangeList
      */
     public function getChange()
     {
-      return $this->change;
+        return $this->change;
     }
 
     /**
-     * @param Change[] $change
-     * @return ChangeList
+     * @param Change $change
      */
-    public function setChange(array $change)
+    public function addChange($change)
     {
-      $this->change = $change;
-      return $this;
+        $this->change[] = $change;
     }
-
 }

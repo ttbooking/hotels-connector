@@ -4,11 +4,18 @@ namespace Bronevik\HotelsConnector\Element;
 
 class GetHotelOfferPricingRequest extends BaseRequest
 {
+    /**
+     * @var Service[]
+     */
+    public $services = [];
 
     /**
-     * @var Service[] $services
+     * @return bool
      */
-    protected $services = null;
+    public function hasServices()
+    {
+        return count($this->services) > 0;
+    }
 
     /**
      * @return Service[]
@@ -19,13 +26,10 @@ class GetHotelOfferPricingRequest extends BaseRequest
     }
 
     /**
-     * @param Service[] $services
-     * @return GetHotelOfferPricingRequest
+     * @param Service $services
      */
-    public function setServices(array $services)
+    public function addServices($services)
     {
-        $this->services = $services;
-        return $this;
+        $this->services[] = $services;
     }
-
 }

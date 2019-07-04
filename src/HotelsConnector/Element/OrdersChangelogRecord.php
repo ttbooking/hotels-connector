@@ -1,62 +1,80 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
+/**
+ * Запись об изменении в услуге
+ * The record of change in order
+ */
 class OrdersChangelogRecord
 {
+    /**
+     * Идентификатор записи об изменении
+     * The change record id
+     *
+     * @var int
+     */
+    public $id;
 
     /**
-     * @var int $id
+     * Идентификатор заказа
+     * The order id
+     *
+     * @var int
      */
-    protected $id = null;
+    public $orderId;
 
     /**
-     * @var int $orderId
+     * Идентификатор услуги
+     * The service id
+     *
+     * @var int
      */
-    protected $orderId = null;
+    public $serviceId;
 
     /**
-     * @var int $serviceId
+     * Номер услуги в системе клиента
+     * The service number in the client system
+     *
+     * @var string
      */
-    protected $serviceId = null;
+    public $referenceId;
 
     /**
-     * @var string $referenceId
+     * Источник создания услуги
+     * The source of booking creation
+     *
+     * @var string
      */
-    protected $referenceId = null;
+    public $serviceCreationSource;
 
     /**
-     * @var string $serviceCreationSource
+     * Дата и время изменения
+     * Date and time of the change
+     *
+     * @var string
      */
-    protected $serviceCreationSource = null;
+    public $createdAt;
 
     /**
-     * @var \DateTime $createdAt
+     * Список изменений
+     * The list of changes
+     *
+     * @var ChangeList
      */
-    protected $createdAt = null;
+    public $changeList;
 
-    /**
-     * @var ChangeList $changeList
-     */
-    protected $changeList = null;
+    public function __construct()
+    {
+        $this->changeList = new ChangeList();
+    }
 
     /**
      * @param int $id
-     * @param int $orderId
-     * @param int $serviceId
-     * @param string $referenceId
-     * @param string $serviceCreationSource
-     * @param \DateTime $createdAt
-     * @param ChangeList $changeList
      */
-    public function __construct($id, $orderId, $serviceId, $referenceId, $serviceCreationSource, \DateTime $createdAt, $changeList)
+    public function setId($id)
     {
-      $this->id = $id;
-      $this->orderId = $orderId;
-      $this->serviceId = $serviceId;
-      $this->referenceId = $referenceId;
-      $this->serviceCreationSource = $serviceCreationSource;
-      $this->createdAt = $createdAt->format(\DateTime::ATOM);
-      $this->changeList = $changeList;
+        $this->id = $id;
     }
 
     /**
@@ -64,17 +82,15 @@ class OrdersChangelogRecord
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
-     * @param int $id
-     * @return OrdersChangelogRecord
+     * @param int $orderId
      */
-    public function setId($id)
+    public function setOrderId($orderId)
     {
-      $this->id = $id;
-      return $this;
+        $this->orderId = $orderId;
     }
 
     /**
@@ -82,17 +98,15 @@ class OrdersChangelogRecord
      */
     public function getOrderId()
     {
-      return $this->orderId;
+        return $this->orderId;
     }
 
     /**
-     * @param int $orderId
-     * @return OrdersChangelogRecord
+     * @param int $serviceId
      */
-    public function setOrderId($orderId)
+    public function setServiceId($serviceId)
     {
-      $this->orderId = $orderId;
-      return $this;
+        $this->serviceId = $serviceId;
     }
 
     /**
@@ -100,17 +114,15 @@ class OrdersChangelogRecord
      */
     public function getServiceId()
     {
-      return $this->serviceId;
+        return $this->serviceId;
     }
 
     /**
-     * @param int $serviceId
-     * @return OrdersChangelogRecord
+     * @param string $referenceId
      */
-    public function setServiceId($serviceId)
+    public function setReferenceId($referenceId)
     {
-      $this->serviceId = $serviceId;
-      return $this;
+        $this->referenceId = $referenceId;
     }
 
     /**
@@ -118,17 +130,15 @@ class OrdersChangelogRecord
      */
     public function getReferenceId()
     {
-      return $this->referenceId;
+        return $this->referenceId;
     }
 
     /**
-     * @param string $referenceId
-     * @return OrdersChangelogRecord
+     * @param string $serviceCreationSource
      */
-    public function setReferenceId($referenceId)
+    public function setServiceCreationSource($serviceCreationSource)
     {
-      $this->referenceId = $referenceId;
-      return $this;
+        $this->serviceCreationSource = $serviceCreationSource;
     }
 
     /**
@@ -136,43 +146,31 @@ class OrdersChangelogRecord
      */
     public function getServiceCreationSource()
     {
-      return $this->serviceCreationSource;
+        return $this->serviceCreationSource;
     }
 
     /**
-     * @param string $serviceCreationSource
-     * @return OrdersChangelogRecord
+     * @param string $createdAt
      */
-    public function setServiceCreationSource($serviceCreationSource)
+    public function setCreatedAt($createdAt)
     {
-      $this->serviceCreationSource = $serviceCreationSource;
-      return $this;
+        $this->createdAt = $createdAt;
     }
 
     /**
-     * @return \DateTime
+     * @return string
      */
     public function getCreatedAt()
     {
-      if ($this->createdAt == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->createdAt);
-        } catch (\Exception $e) {
-          return false;
-        }
-      }
+        return $this->createdAt;
     }
 
     /**
-     * @param \DateTime $createdAt
-     * @return OrdersChangelogRecord
+     * @param ChangeList $changeList
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setChangeList($changeList)
     {
-      $this->createdAt = $createdAt->format(\DateTime::ATOM);
-      return $this;
+        $this->changeList = $changeList;
     }
 
     /**
@@ -180,17 +178,6 @@ class OrdersChangelogRecord
      */
     public function getChangeList()
     {
-      return $this->changeList;
+        return $this->changeList;
     }
-
-    /**
-     * @param ChangeList $changeList
-     * @return OrdersChangelogRecord
-     */
-    public function setChangeList($changeList)
-    {
-      $this->changeList = $changeList;
-      return $this;
-    }
-
 }

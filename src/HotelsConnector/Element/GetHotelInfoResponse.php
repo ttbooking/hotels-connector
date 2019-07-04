@@ -5,14 +5,11 @@ namespace Bronevik\HotelsConnector\Element;
 class GetHotelInfoResponse extends BaseResponse
 {
     /**
-     * Type: tns:HotelWithInfo
-     *
-     * @var \Bronevik\HotelsConnector\Element\HotelWithInfo[]
+     * @var HotelWithInfo[]
      */
     public $hotels = [];
 
     /**
-     *
      * @return bool
      */
     public function hasHotels()
@@ -22,7 +19,7 @@ class GetHotelInfoResponse extends BaseResponse
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\HotelWithInfo[]
+      @return HotelWithInfo[]
      */
     public function getHotels()
     {
@@ -31,11 +28,10 @@ class GetHotelInfoResponse extends BaseResponse
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\HotelWithInfo $hotels
+      @param HotelWithInfo $hotels
      */
     public function addHotels($hotels)
     {
         $this->hotels[] = $hotels;
     }
 }
-

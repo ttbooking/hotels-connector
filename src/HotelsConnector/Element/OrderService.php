@@ -5,65 +5,101 @@ namespace Bronevik\HotelsConnector\Element;
 abstract class OrderService
 {
     /**
-     * Type: xsd:int
+     * Идентификатор услуги
+     * The service id
+     *
+     * @varint
+     */
+    public $id;
+
+    /**
+     * Дата создания услуги
+     * The creating order date
+     *
+     * @var string
+     */
+    public $date;
+
+    /**
+     * Номер услуги в системе клиента
+     * The service number in the client’s system
+     *
+     * @var string
+     */
+    public $referenceId;
+
+    /**
+     * Идентификатор города, где находится отель
+     * The id of the city where the hotel is located
      *
      * @var int
      */
-    public $id = null;
+    public $cityId;
 
     /**
-     * Type: xsd:dateTime
+     * Название города
+     * The name of the city where the hotel is located
      *
      * @var string
      */
-    public $date = null;
+    public $cityName;
 
     /**
-     * Type: xsd:string
+     * Идентификатор страны, где находится отель
+     * The id of the country where the hotel is located
+     *
+     * @var int
+     */
+    public $countryId;
+
+    /**
+     * Название страны
+     * The name of the country where the hotel is located
      *
      * @var string
      */
-    public $referenceId = null;
+    public $countryName;
 
     /**
-     * Type: tns:PriceDetails
+     * Детализация стоимости заказа
+     * The detailed order price
      *
-     * @var \Bronevik\HotelsConnector\Element\PriceDetails
+     * @var PriceDetails
      */
-    public $priceDetails = null;
+    public $priceDetails;
 
     /**
-     * Type: tns:CancellationPolicy
+     * Правила отмены брони
+     * The policies of booking cancellation
      *
-     * @var \Bronevik\HotelsConnector\Element\CancellationPolicy[]
+     * @var CancellationPolicy[]
      */
     public $cancellationPolicies = [];
 
     /**
-     * Type: xsd:int
+     * Статус услуги
+     * The service status
      *
      * @var int
      */
-    public $statusId = null;
+    public $statusId;
 
     /**
-     * Type: xsd:string
+     * Название статуса услуги
+     * The service name
      *
      * @var string
      */
-    public $statusName = null;
+    public $statusName;
 
-    /**
-     *
-     */
     public function __construct()
     {
-        $this->priceDetails = new \Bronevik\HotelsConnector\Element\PriceDetails;
+        $this->priceDetails = new PriceDetails();
     }
 
     /**
      *
-     * @param int $id
+      @param int $id
      */
     public function setId($id)
     {
@@ -71,7 +107,6 @@ abstract class OrderService
     }
 
     /**
-     *
      * @return int
      */
     public function getId()
@@ -81,7 +116,7 @@ abstract class OrderService
 
     /**
      *
-     * @param string $date
+      @param string $date
      */
     public function setDate($date)
     {
@@ -89,7 +124,6 @@ abstract class OrderService
     }
 
     /**
-     *
      * @return string
      */
     public function getDate()
@@ -99,7 +133,7 @@ abstract class OrderService
 
     /**
      *
-     * @param string $referenceId
+      @param string $referenceId
      */
     public function setReferenceId($referenceId)
     {
@@ -107,7 +141,6 @@ abstract class OrderService
     }
 
     /**
-     *
      * @return string
      */
     public function getReferenceId()
@@ -116,8 +149,71 @@ abstract class OrderService
     }
 
     /**
-     *
-     * @param \Bronevik\HotelsConnector\Element\PriceDetails $priceDetails
+     * @param int $cityId
+     */
+    public function setCityId($cityId)
+    {
+        $this->cityId = $cityId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCityId()
+    {
+        return $this->cityId;
+    }
+
+    /**
+     * @param string $cityName
+     */
+    public function setCityName($cityName)
+    {
+        $this->cityName = $cityName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCityName()
+    {
+        return $this->cityName;
+    }
+
+    /**
+     * @param int $countryId
+     */
+    public function setCountryId($countryId)
+    {
+        $this->countryId = $countryId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCountryId()
+    {
+        return $this->countryId;
+    }
+
+    /**
+     * @param string $countryName
+     */
+    public function setCountryName($countryName)
+    {
+        $this->countryName = $countryName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountryName()
+    {
+        return $this->countryName;
+    }
+
+    /**
+     * @param PriceDetails $priceDetails
      */
     public function setPriceDetails($priceDetails)
     {
@@ -126,7 +222,7 @@ abstract class OrderService
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\PriceDetails
+      @return PriceDetails
      */
     public function getPriceDetails()
     {
@@ -134,7 +230,6 @@ abstract class OrderService
     }
 
     /**
-     *
      * @return bool
      */
     public function hasCancellationPolicies()
@@ -144,7 +239,7 @@ abstract class OrderService
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\CancellationPolicy[]
+      @return CancellationPolicy[]
      */
     public function getCancellationPolicies()
     {
@@ -153,7 +248,7 @@ abstract class OrderService
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\CancellationPolicy $cancellationPolicies
+      @param CancellationPolicy $cancellationPolicies
      */
     public function addCancellationPolicies($cancellationPolicies)
     {
@@ -162,7 +257,7 @@ abstract class OrderService
 
     /**
      *
-     * @param int $statusId
+      @param int $statusId
      */
     public function setStatusId($statusId)
     {
@@ -170,7 +265,6 @@ abstract class OrderService
     }
 
     /**
-     *
      * @return int
      */
     public function getStatusId()
@@ -180,7 +274,7 @@ abstract class OrderService
 
     /**
      *
-     * @param string $statusName
+      @param string $statusName
      */
     public function setStatusName($statusName)
     {
@@ -188,7 +282,6 @@ abstract class OrderService
     }
 
     /**
-     *
      * @return string
      */
     public function getStatusName()
@@ -196,4 +289,3 @@ abstract class OrderService
         return $this->statusName;
     }
 }
-

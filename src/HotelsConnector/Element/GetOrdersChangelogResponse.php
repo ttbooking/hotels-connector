@@ -1,30 +1,35 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class GetOrdersChangelogResponse extends BaseResponse
 {
+    /**
+     * @var OrdersChangelogRecord[]
+     */
+    public $ordersChangelogRecord = [];
 
     /**
-     * @var OrdersChangelogRecord[] $ordersChangelogRecord
+     * @return bool
      */
-    protected $ordersChangelogRecord = null;
+    public function hasOrdersChangelogRecord()
+    {
+        return count($this->ordersChangelogRecord) > 0;
+    }
 
-     /**
+    /**
      * @return OrdersChangelogRecord[]
      */
     public function getOrdersChangelogRecord()
     {
-      return $this->ordersChangelogRecord;
+        return $this->ordersChangelogRecord;
     }
 
     /**
-     * @param OrdersChangelogRecord[] $ordersChangelogRecord
-     * @return GetOrdersChangelogResponse
+     * @param OrdersChangelogRecord $ordersChangelogRecord
      */
-    public function setOrdersChangelogRecord(array $ordersChangelogRecord = null)
+    public function addOrdersChangelogRecord($ordersChangelogRecord)
     {
-      $this->ordersChangelogRecord = $ordersChangelogRecord;
-      return $this;
+        $this->ordersChangelogRecord[] = $ordersChangelogRecord;
     }
-
 }

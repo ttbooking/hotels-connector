@@ -5,23 +5,19 @@ namespace Bronevik\HotelsConnector\Element;
 class UpdateOrderRequest extends BaseRequest
 {
     /**
-     * Type: tns:Order
-     *
-     * @var \Bronevik\HotelsConnector\Element\Order
+     * @var Order
      */
-    public $order = null;
+    public $order;
 
-    /**
-     *
-     */
     public function __construct()
     {
-        $this->order = new \Bronevik\HotelsConnector\Element\Order;
+        parent::__construct();
+        $this->order = new Order();
     }
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\Order $order
+      @param Order $order
      */
     public function setOrder($order)
     {
@@ -30,11 +26,10 @@ class UpdateOrderRequest extends BaseRequest
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\Order
+      @return Order
      */
     public function getOrder()
     {
         return $this->order;
     }
 }
-

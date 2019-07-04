@@ -2,25 +2,25 @@
 
 namespace Bronevik\HotelsConnector\Element;
 
+/**
+ * Поиск по дате заезда
+ * The order search by check-in date
+ */
 class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
 {
     /**
-     * Type: xsd:date
-     *
-     * @var date
+     * @var string
      */
-    public $dateStart = null;
+    public $dateStart;
 
     /**
-     * Type: xsd:date
-     *
-     * @var date
+     * @var string
      */
-    public $dateEnd = null;
+    public $dateEnd;
 
     /**
      *
-     * @param date $dateStart
+      @param string $dateStart
      */
     public function setDateStart($dateStart)
     {
@@ -29,7 +29,7 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
 
     /**
      *
-     * @return date
+      @return string
      */
     public function getDateStart()
     {
@@ -38,7 +38,7 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
 
     /**
      *
-     * @param date $dateEnd
+      @param string $dateEnd
      */
     public function setDateEnd($dateEnd)
     {
@@ -47,11 +47,10 @@ class SearchOrderCriterionArrivalDate extends SearchOrderCriterion
 
     /**
      *
-     * @return date
+      @return string
      */
     public function getDateEnd()
     {
         return $this->dateEnd;
     }
 }
-

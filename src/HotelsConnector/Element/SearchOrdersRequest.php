@@ -5,14 +5,11 @@ namespace Bronevik\HotelsConnector\Element;
 class SearchOrdersRequest extends BaseRequest
 {
     /**
-     * Type: tns:SearchOrderCriterion
-     *
-     * @var \Bronevik\HotelsConnector\Element\SearchOrderCriterion[]
+     * @var SearchOrderCriterion[]
      */
     public $searchCriteria = [];
 
     /**
-     *
      * @return bool
      */
     public function hasSearchCriteria()
@@ -22,7 +19,7 @@ class SearchOrdersRequest extends BaseRequest
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\SearchOrderCriterion[]
+      @return SearchOrderCriterion[]
      */
     public function getSearchCriteria()
     {
@@ -31,11 +28,10 @@ class SearchOrdersRequest extends BaseRequest
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\SearchOrderCriterion $searchCriteria
+      @param SearchOrderCriterion $searchCriteria
      */
     public function addSearchCriteria($searchCriteria)
     {
         $this->searchCriteria[] = $searchCriteria;
     }
 }
-

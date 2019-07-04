@@ -21,10 +21,5 @@
         "psr-4": {
             "Bronevik\\": "src/"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Bronevik\\HotelsConnector\\": "tests/"
-        }
     }
 }

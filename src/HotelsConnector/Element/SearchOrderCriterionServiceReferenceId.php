@@ -2,18 +2,20 @@
 
 namespace Bronevik\HotelsConnector\Element;
 
+/**
+ * Поиск заказа по номеру услуги в системе клиента
+ * The order search by client’s service number
+ */
 class SearchOrderCriterionServiceReferenceId extends SearchOrderCriterion
 {
     /**
-     * Type: xsd:string
-     *
      * @var string
      */
-    public $referenceId = null;
+    public $referenceId;
 
     /**
      *
-     * @param string $referenceId
+      @param string $referenceId
      */
     public function setReferenceId($referenceId)
     {
@@ -21,7 +23,6 @@ class SearchOrderCriterionServiceReferenceId extends SearchOrderCriterion
     }
 
     /**
-     *
      * @return string
      */
     public function getReferenceId()
@@ -29,4 +30,3 @@ class SearchOrderCriterionServiceReferenceId extends SearchOrderCriterion
         return $this->referenceId;
     }
 }
-

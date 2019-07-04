@@ -5,168 +5,142 @@ namespace Bronevik\HotelsConnector\Element;
 class Hotel
 {
     /**
-     * Type: xsd:string
+     * Идентификатор отеля
+     * The hotel id
+     *
+     * @var int
+     */
+    public $id;
+
+    /**
+     * Идентификатор города
+     * The city id
+     *
+     * @var int
+     */
+    public $cityId;
+
+    /**
+     * The city name
      *
      * @var string
      */
-    public $id = null;
+    public $cityName;
 
     /**
-     * Type: xsd:string
+     * Название отеля
+     * The hotel name
      *
      * @var string
      */
-    public $cityId = null;
+    public $name;
 
     /**
-     * @var string $cityName
-     */
-    public $cityName = null;
-
-    /**
-     * @var string $countryId
-     */
-    public $countryId = null;
-
-    /**
-     * @var string $countryName
-     */
-    public $countryName = null;
-
-    /**
-     * Type: xsd:string
+     * Адрес отеля
+     * The hotel address
      *
      * @var string
      */
-    public $name = null;
+    public $address;
 
     /**
-     * Type: xsd:string
+     * Время заезда
+     * The check-in time
      *
      * @var string
      */
-    public $address = null;
+    public $checkinTime;
 
     /**
-     * Расстояние до центра города (км)
-     * Type: xsd:string
+     * Время выезда
+     * The check-out time
      *
      * @var string
      */
-    public $distanceToCenter = null;
+    public $checkoutTime;
 
     /**
-     * Широта
-     * Type: xsd:string
-     *
-     * @var string
-     */
-    public $latitude = null;
-
-    /**
-     * Type: xsd:string
-     *
-     * @var string
-     */
-    public $longitude = null;
-
-    /**
-     * Type: xsd:time
-     *
-     * @var string
-     */
-    public $checkinTime = null;
-
-    /**
-     * Type: xsd:time
-     *
-     * @var string
-     */
-    public $checkoutTime = null;
-
-    /**
-     * @var boolean $isFixedCheckinTime
-     */
-    protected $isFixedCheckinTime = null;
-
-    /**
-     * Type: xsd:string
-     *
-     * @var string
-     */
-    public $description = null;
-
-    /**
-     * Type: xsd:boolean
+     * Фиксировано ли время заезда в отеле
+     * Whether the check-in time is fixed or not
      *
      * @var boolean
      */
-    public $vatApplicable = null;
+    public $isFixedCheckinTime;
 
     /**
-     * @var boolean $hasTaxes
-     */
-    public $hasTaxes = false;
-
-    /**
-     * Фотографии отеля
-     * Type: tns:Image
+     * Описание отеля
+     * The hotel description
      *
-     * @var \Bronevik\HotelsConnector\Element\Image[]
+     * @var DescriptionDetails
      */
-    public $photos = [];
+    public $descriptionDetails;
 
     /**
-     * Доступные в отеле удобства
-     * Type: tns:AvailableAmenity
+     * Применим ли к отелю НДС
+     * Returns `true` for properties located in Russian Federation and `false` for foreign properties
      *
-     * @var \Bronevik\HotelsConnector\Element\AvailableAmenity[]
+     * @var boolean
      */
-    public $availableAmenities = [];
+    public $vatApplicable;
+
+    /**
+     * Наличие в отеле дополнительных сборов
+     * Specifies whether the hotel has additional taxes
+     *
+     * @var boolean
+     */
+    public $hasTaxes;
 
     /**
      * Услуги отеля
-     * Type: tns:HotelAmenity
+     * The hotel amenities
      *
-     * @var \Bronevik\HotelsConnector\Element\HotelAmenity[]
+     * @var HotelAmenity[]
      */
     public $amenities = [];
 
     /**
-     * Категория отеля от 0 до 5. 0 - категория
-     *                                 не указана.
-     * Type: xsd:int
+     * Категория отеля (от 0 до 5, если 0 - категория не указана)
+     * The property star rating (0-5 stars)
      *
      * @var int
      */
-    public $category = null;
+    public $category;
 
     /**
-     * Type: xsd:string
+     * Тип отеля
+     * The type of the hotel
      *
      * @var string
      */
-    public $type = null;
+    public $type;
 
     /**
      * Важная информация для гостей
-     * Type: tns:InformationForGuest
+     * An important information for guest about hotel accommodation
      *
-     * @var \Bronevik\HotelsConnector\Element\InformationForGuest
+     * @var InformationForGuest
      */
-    public $informationForGuest = null;
+    public $informationForGuest;
 
     /**
+     *Дополнительная информация
+     * Additional info
      *
+     * @var AdditionalInfo
      */
+    public $additionalInfo;
+
     public function __construct()
     {
-        $this->informationForGuest = new \Bronevik\HotelsConnector\Element\InformationForGuest();
+        $this->descriptionDetails  = new DescriptionDetails();
+        $this->informationForGuest = new InformationForGuest();
+        $this->additionalInfo      = new AdditionalInfo();
     }
 
     /**
      *
-     * @param string $id
+      @param int $id
      */
     public function setId($id)
     {
@@ -175,11 +149,37 @@ class Hotel
 
     /**
      *
-     * @return string
+      @return int
      */
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     *
+      @param int $cityId
+     */
+    public function setCityId($cityId)
+    {
+        $this->cityId = $cityId;
+    }
+
+    /**
+     *
+      @return int
+     */
+    public function getCityId()
+    {
+        return $this->cityId;
+    }
+
+    /**
+     *@param string $cityName
+     */
+    public function setCityName($cityName)
+    {
+        $this->cityName = $cityName;
     }
 
     /**
@@ -191,89 +191,6 @@ class Hotel
     }
 
     /**
-     * @param string $cityName
-     * @return Hotel
-     */
-    public function setCityName($cityName)
-    {
-        $this->cityName = $cityName;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCountryId()
-    {
-        return $this->countryId;
-    }
-
-    /**
-     * @param string $countryId
-     * @return Hotel
-     */
-    public function setCountryId($countryId)
-    {
-        $this->countryId = $countryId;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCountryName()
-    {
-        return $this->countryName;
-    }
-
-    /**
-     * @param string $countryName
-     * @return Hotel
-     */
-    public function setCountryName($countryName)
-    {
-        $this->countryName = $countryName;
-        return $this;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isHasTaxes()
-    {
-        return $this->hasTaxes;
-    }
-
-    /**
-     * @param bool $hasTaxes
-     * @return Hotel
-     */
-    public function setHasTaxes($hasTaxes)
-    {
-        $this->hasTaxes = $hasTaxes;
-        return $this;
-    }
-
-    /**
-     *
-     * @param string $cityId
-     */
-    public function setCityId($cityId)
-    {
-        $this->cityId = $cityId;
-    }
-
-    /**
-     *
-     * @return string
-     */
-    public function getCityId()
-    {
-        return $this->cityId;
-    }
-
-    /**
-     *
      * @param string $name
      */
     public function setName($name)
@@ -282,7 +199,6 @@ class Hotel
     }
 
     /**
-     *
      * @return string
      */
     public function getName()
@@ -292,7 +208,7 @@ class Hotel
 
     /**
      *
-     * @param string $address
+      @param string $address
      */
     public function setAddress($address)
     {
@@ -300,7 +216,6 @@ class Hotel
     }
 
     /**
-     *
      * @return string
      */
     public function getAddress()
@@ -310,61 +225,7 @@ class Hotel
 
     /**
      *
-     * @param string $distanceToCenter
-     */
-    public function setDistanceToCenter($distanceToCenter)
-    {
-        $this->distanceToCenter = $distanceToCenter;
-    }
-
-    /**
-     *
-     * @return string
-     */
-    public function getDistanceToCenter()
-    {
-        return $this->distanceToCenter;
-    }
-
-    /**
-     *
-     * @param string $latitude
-     */
-    public function setLatitude($latitude)
-    {
-        $this->latitude = $latitude;
-    }
-
-    /**
-     *
-     * @return string
-     */
-    public function getLatitude()
-    {
-        return $this->latitude;
-    }
-
-    /**
-     *
-     * @param string $longitude
-     */
-    public function setLongitude($longitude)
-    {
-        $this->longitude = $longitude;
-    }
-
-    /**
-     *
-     * @return string
-     */
-    public function getLongitude()
-    {
-        return $this->longitude;
-    }
-
-    /**
-     *
-     * @param string $checkinTime
+      @param string $checkinTime
      */
     public function setCheckinTime($checkinTime)
     {
@@ -372,7 +233,6 @@ class Hotel
     }
 
     /**
-     *
      * @return string
      */
     public function getCheckinTime()
@@ -382,7 +242,7 @@ class Hotel
 
     /**
      *
-     * @param string $checkoutTime
+      @param string $checkoutTime
      */
     public function setCheckoutTime($checkoutTime)
     {
@@ -390,7 +250,6 @@ class Hotel
     }
 
     /**
-     *
      * @return string
      */
     public function getCheckoutTime()
@@ -399,43 +258,39 @@ class Hotel
     }
 
     /**
-     * @return bool
+     *@param boolean $isFixedCheckinTime
      */
-    public function isFixedCheckinTime()
+    public function setIsFixedCheckinTime($isFixedCheckinTime)
+    {
+        $this->isFixedCheckinTime = $isFixedCheckinTime;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsFixedCheckinTime()
     {
         return $this->isFixedCheckinTime;
     }
 
     /**
-     * @param bool $isFixedCheckinTime
-     * @return Hotel
+     *
+     @param DescriptionDetails $descriptionDetails
      */
-    public function setIsFixedCheckinTime($isFixedCheckinTime)
+    public function setDescriptionDetails($descriptionDetails)
     {
-        $this->isFixedCheckinTime = $isFixedCheckinTime;
-        return $this;
+        $this->descriptionDetails = $descriptionDetails;
     }
 
     /**
-     *
-     * @param string $description
+     *@return DescriptionDetails
      */
-    public function setDescription($description)
+    public function getDescriptionDetails()
     {
-        $this->description = $description;
+        return $this->descriptionDetails;
     }
 
     /**
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     *
      * @param boolean $vatApplicable
      */
     public function setVatApplicable($vatApplicable)
@@ -444,7 +299,6 @@ class Hotel
     }
 
     /**
-     *
      * @return boolean
      */
     public function getVatApplicable()
@@ -454,60 +308,22 @@ class Hotel
 
     /**
      *
-     * @return bool
+      @param boolean $hasTaxes
      */
-    public function hasPhotos()
+    public function setHasTaxes($hasTaxes)
     {
-        return count($this->photos) > 0;
+        $this->hasTaxes = $hasTaxes;
     }
 
     /**
-     *
-     * @return \Bronevik\HotelsConnector\Element\Image[]
+     * @return boolean
      */
-    public function getPhotos()
+    public function getHasTaxes()
     {
-        return $this->photos;
+        return $this->hasTaxes;
     }
 
     /**
-     *
-     * @param \Bronevik\HotelsConnector\Element\Image $photos
-     */
-    public function addPhotos($photos)
-    {
-        $this->photos[] = $photos;
-    }
-
-    /**
-     *
-     * @return bool
-     */
-    public function hasAvailableAmenities()
-    {
-        return count($this->availableAmenities) > 0;
-    }
-
-    /**
-     *
-     * @return \Bronevik\HotelsConnector\Element\AvailableAmenity[]
-     */
-    public function getAvailableAmenities()
-    {
-        return $this->availableAmenities;
-    }
-
-    /**
-     *
-     * @param \Bronevik\HotelsConnector\Element\AvailableAmenity $availableAmenities
-     */
-    public function addAvailableAmenities($availableAmenities)
-    {
-        $this->availableAmenities[] = $availableAmenities;
-    }
-
-    /**
-     *
      * @return bool
      */
     public function hasAmenities()
@@ -517,7 +333,7 @@ class Hotel
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\HotelAmenity[]
+      @return HotelAmenity[]
      */
     public function getAmenities()
     {
@@ -526,7 +342,7 @@ class Hotel
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\HotelAmenity $amenities
+      @param HotelAmenity $amenities
      */
     public function addAmenities($amenities)
     {
@@ -535,7 +351,7 @@ class Hotel
 
     /**
      *
-     * @param int $category
+      @param int $category
      */
     public function setCategory($category)
     {
@@ -543,7 +359,6 @@ class Hotel
     }
 
     /**
-     *
      * @return int
      */
     public function getCategory()
@@ -553,7 +368,7 @@ class Hotel
 
     /**
      *
-     * @param string $type
+      @param string $type
      */
     public function setType($type)
     {
@@ -561,7 +376,6 @@ class Hotel
     }
 
     /**
-     *
      * @return string
      */
     public function getType()
@@ -571,7 +385,7 @@ class Hotel
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\InformationForGuest $informationForGuest
+      @param InformationForGuest $informationForGuest
      */
     public function setInformationForGuest($informationForGuest)
     {
@@ -580,7 +394,7 @@ class Hotel
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\InformationForGuest
+      @return InformationForGuest
      */
     public function getInformationForGuest()
     {
@@ -588,5 +402,19 @@ class Hotel
     }
 
 
-}
+/**
+     * @param AdditionalInfo $additionalInfo
+     */
+    public function setAdditionalInfo($additionalInfo)
+    {
+        $this->additionalInfo = $additionalInfo;
+    }
 
+    /**
+     * @return AdditionalInfo
+     */
+    public function getAdditionalInfo()
+    {
+        return $this->additionalInfo;
+    }
+}

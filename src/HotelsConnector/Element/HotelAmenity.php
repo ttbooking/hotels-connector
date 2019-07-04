@@ -2,25 +2,31 @@
 
 namespace Bronevik\HotelsConnector\Element;
 
+/**
+ * Услуги отеля
+ * Hotel's amenities
+ */
 class HotelAmenity
 {
     /**
-     * Type: xsd:string
+     * Название услуги
+     * The amenity name
      *
      * @var string
      */
-    public $name = null;
+    public $name;
 
     /**
-     * Type: xsd:string
+     * Тип услуги
+     * The amenity type
      *
      * @var string
      */
-    public $type = null;
+    public $type;
 
     /**
      *
-     * @param string $name
+      @param string $name
      */
     public function setName($name)
     {
@@ -28,7 +34,6 @@ class HotelAmenity
     }
 
     /**
-     *
      * @return string
      */
     public function getName()
@@ -38,7 +43,7 @@ class HotelAmenity
 
     /**
      *
-     * @param string $type
+      @param string $type
      */
     public function setType($type)
     {
@@ -46,7 +51,6 @@ class HotelAmenity
     }
 
     /**
-     *
      * @return string
      */
     public function getType()
@@ -54,4 +58,3 @@ class HotelAmenity
         return $this->type;
     }
 }
-

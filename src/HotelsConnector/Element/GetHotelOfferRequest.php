@@ -5,14 +5,17 @@ namespace Bronevik\HotelsConnector\Element;
 class GetHotelOfferRequest extends BaseRequest
 {
     /**
-     * Type: xsd:string
-     *
      * @var string[]
      */
     public $offerCode = [];
 
     /**
-     *
+     *@see SkipElementTypes::$availableSkipElementsForGetHotelOffer
+     * @var SkipElements
+     */
+    public $skipElements;
+
+    /**
      * @return bool
      */
     public function hasOfferCode()
@@ -21,7 +24,6 @@ class GetHotelOfferRequest extends BaseRequest
     }
 
     /**
-     *
      * @return string[]
      */
     public function getOfferCode()
@@ -31,11 +33,26 @@ class GetHotelOfferRequest extends BaseRequest
 
     /**
      *
-     * @param string $offerCode
+      @param string $offerCode
      */
     public function addOfferCode($offerCode)
     {
         $this->offerCode[] = $offerCode;
     }
-}
 
+    /**
+     * @param SkipElements $skipElements
+     */
+    public function setSkipElements($skipElements)
+    {
+        $this->skipElements = $skipElements;
+    }
+
+    /**
+     * @return SkipElements
+     */
+    public function getSkipElements()
+    {
+        return $this->skipElements;
+    }
+}

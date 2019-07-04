@@ -5,29 +5,32 @@ namespace Bronevik\HotelsConnector\Element;
 class AvailableMeal
 {
     /**
-     * Type: xsd:int
+     * Идентификатор услуги питания
+     * The meal service id
      *
      * @var int
      */
-    public $id = null;
+    public $id;
 
     /**
-     * Type: xsd:float
+     * Стоимость услуги питания
+     * The meal service cost
      *
      * @var float
      */
-    public $price = null;
+    public $price;
 
     /**
-     * Type: xsd:boolean
+     * Включена ли услуга в предложение
+     * Whether the service is included in the offer
      *
      * @var boolean
      */
-    public $included = null;
+    public $included;
 
     /**
      *
-     * @param int $id
+      @param int $id
      */
     public function setId($id)
     {
@@ -35,7 +38,6 @@ class AvailableMeal
     }
 
     /**
-     *
      * @return int
      */
     public function getId()
@@ -45,7 +47,7 @@ class AvailableMeal
 
     /**
      *
-     * @param float $price
+      @param float $price
      */
     public function setPrice($price)
     {
@@ -53,7 +55,6 @@ class AvailableMeal
     }
 
     /**
-     *
      * @return float
      */
     public function getPrice()
@@ -63,7 +64,7 @@ class AvailableMeal
 
     /**
      *
-     * @param boolean $included
+      @param boolean $included
      */
     public function setIncluded($included)
     {
@@ -71,7 +72,6 @@ class AvailableMeal
     }
 
     /**
-     *
      * @return boolean
      */
     public function getIncluded()
@@ -79,4 +79,3 @@ class AvailableMeal
         return $this->included;
     }
 }
-

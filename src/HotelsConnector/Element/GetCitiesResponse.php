@@ -5,14 +5,11 @@ namespace Bronevik\HotelsConnector\Element;
 class GetCitiesResponse extends BaseResponse
 {
     /**
-     * Type: tns:City
-     *
-     * @var \Bronevik\HotelsConnector\Element\City[]
+     * @var City[]
      */
     public $cities = [];
 
     /**
-     *
      * @return bool
      */
     public function hasCities()
@@ -22,7 +19,7 @@ class GetCitiesResponse extends BaseResponse
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\City[]
+      @return City[]
      */
     public function getCities()
     {
@@ -31,11 +28,10 @@ class GetCitiesResponse extends BaseResponse
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\City $cities
+      @param City $cities
      */
     public function addCities($cities)
     {
         $this->cities[] = $cities;
     }
 }
-

@@ -3,51 +3,75 @@
 namespace Bronevik\HotelsConnector\Element;
 
 /**
- * Номер отеля
- *
+ * Описание номера отеля
+ *The hotel room description
  */
 class HotelRoom
 {
     /**
-     * Type: xsd:int
-     *
      * @var int
      */
-    public $id = null;
+    public $id;
 
     /**
-     * Type: xsd:string
-     *
      * @var string
      */
-    public $name = null;
+    public $name;
 
     /**
      * Доступные в номере удобства
-     * Type: tns:AvailableAmenity
+     * Available amenities in room
      *
-     * @var \Bronevik\HotelsConnector\Element\AvailableAmenity[]
+     * @var AvailableAmenity[]
      */
     public $availableAmenities = [];
 
     /**
      * Описание номера
-     * Type: xsd:string
+     * The text room description
      *
      * @var string
      */
-    public $description = null;
+    public $description;
 
     /**
      * Фотографии номера
-     * Type: tns:Image
+     * Room's photos
      *
-     * @var \Bronevik\HotelsConnector\Element\Image[]
+     * @var Image[]
      */
     public $photos = [];
 
     /**
+     *Количество гостей, которых можно разместить в номере
+     * An amount of guests that can be accommodated in the room
      *
+     * @var int
+     */
+    public $roomCapacity;
+
+    /**
+     * Площадь номера
+     * Room size
+     *
+     * @var float
+     */
+    public $size;
+
+    /**
+     * Варианты комбинаций кроватей.
+     * Bed combinations options.
+     *
+     * @var BedSets
+     */
+    public $bedSets;
+
+    public function __construct()
+    {
+        $this->bedSets = new BedSets();
+    }
+
+    /**
      * @param int $id
      */
     public function setId($id)
@@ -56,7 +80,6 @@ class HotelRoom
     }
 
     /**
-     *
      * @return int
      */
     public function getId()
@@ -66,7 +89,7 @@ class HotelRoom
 
     /**
      *
-     * @param string $name
+      @param string $name
      */
     public function setName($name)
     {
@@ -74,7 +97,6 @@ class HotelRoom
     }
 
     /**
-     *
      * @return string
      */
     public function getName()
@@ -83,7 +105,6 @@ class HotelRoom
     }
 
     /**
-     *
      * @return bool
      */
     public function hasAvailableAmenities()
@@ -93,7 +114,7 @@ class HotelRoom
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\AvailableAmenity[]
+      @return AvailableAmenity[]
      */
     public function getAvailableAmenities()
     {
@@ -102,7 +123,7 @@ class HotelRoom
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\AvailableAmenity $availableAmenities
+      @param AvailableAmenity $availableAmenities
      */
     public function addAvailableAmenities($availableAmenities)
     {
@@ -111,7 +132,7 @@ class HotelRoom
 
     /**
      *
-     * @param string $description
+      @param string $description
      */
     public function setDescription($description)
     {
@@ -119,7 +140,6 @@ class HotelRoom
     }
 
     /**
-     *
      * @return string
      */
     public function getDescription()
@@ -128,7 +148,6 @@ class HotelRoom
     }
 
     /**
-     *
      * @return bool
      */
     public function hasPhotos()
@@ -138,7 +157,7 @@ class HotelRoom
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\Image[]
+      @return Image[]
      */
     public function getPhotos()
     {
@@ -147,11 +166,58 @@ class HotelRoom
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\Image $photos
+      @param Image $photos
      */
     public function addPhotos($photos)
     {
         $this->photos[] = $photos;
     }
-}
 
+    /**
+     * @param int $roomCapacity
+     */
+    public function setRoomCapacity($roomCapacity)
+    {
+        $this->roomCapacity = $roomCapacity;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRoomCapacity()
+    {
+        return $this->roomCapacity;
+    }
+
+    /**
+     * @param float $size
+     */
+    public function setSize($size)
+    {
+        $this->size = $size;
+    }
+
+    /**
+     * @return float
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * @return BedSets
+     */
+    public function getBedSets()
+    {
+        return $this->bedSets;
+    }
+
+    /**
+     * @param BedSets $bedSets
+     */
+    public function setBedSets($bedSets)
+    {
+        $this->bedSets = $bedSets;
+    }
+}

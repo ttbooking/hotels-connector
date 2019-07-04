@@ -1,30 +1,27 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class RemoveOrdersChangelogRecordsResponse extends BaseResponse
 {
+    /**
+     * @var string
+     */
+    public $status;
 
     /**
-     * @var string $status
+     * @param string $status
      */
-    protected $status = null;
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
 
     /**
      * @return string
      */
     public function getStatus()
     {
-      return $this->status;
+        return $this->status;
     }
-
-    /**
-     * @param string $status
-     * @return RemoveOrdersChangelogRecordsResponse
-     */
-    public function setStatus($status)
-    {
-      $this->status = $status;
-      return $this;
-    }
-
 }

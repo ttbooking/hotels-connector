@@ -4,33 +4,29 @@ namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Поиск по количеству человек
- *
+ *The offer search by number of guests
  */
 class SearchOfferCriterionNumberOfGuests extends SearchOfferCriterion
 {
     /**
      * Количество взрослых
-     * Type:
+     * Number of adult guests
      *
-     * @var
+     * @varint
      */
-    public $adults = null;
+    public $adults;
 
     /**
      *
-     * @param  $adults
+      @param int $adults
      */
     public function setAdults($adults)
     {
         $this->adults = $adults;
     }
 
-    /**
-     *
-     */
     public function getAdults()
     {
         return $this->adults;
     }
 }
-

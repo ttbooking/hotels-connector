@@ -6,15 +6,15 @@ class NamedDetailedPrice extends DetailedPrice
 {
     /**
      * Наименование цены
-     * Type: xsd:string
+     * The price name
      *
      * @var string
      */
-    public $name = null;
+    public $name;
 
     /**
      *
-     * @param string $name
+      @param string $name
      */
     public function setName($name)
     {
@@ -22,7 +22,6 @@ class NamedDetailedPrice extends DetailedPrice
     }
 
     /**
-     *
      * @return string
      */
     public function getName()
@@ -30,4 +29,3 @@ class NamedDetailedPrice extends DetailedPrice
         return $this->name;
     }
 }
-

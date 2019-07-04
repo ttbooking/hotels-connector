@@ -5,15 +5,16 @@ namespace Bronevik\HotelsConnector\Element;
 class InformationForGuest
 {
     /**
-     * Type: xsd:string
+     * Важная информация об отеле
+     * Important information about hotel
      *
      * @var string
      */
-    public $comment = null;
+    public $comment;
 
     /**
      *
-     * @param string $comment
+      @param string $comment
      */
     public function setComment($comment)
     {
@@ -21,7 +22,6 @@ class InformationForGuest
     }
 
     /**
-     *
      * @return string
      */
     public function getComment()
@@ -29,4 +29,3 @@ class InformationForGuest
         return $this->comment;
     }
 }
-

@@ -1,35 +1,47 @@
 <?php
+
 namespace Bronevik\HotelsConnector\Element;
 
 class MealPriceDetails extends ClientPriceDetails
 {
+    /**
+     * Идентификатор услуги питания
+     * The meal service id
+     *
+     * @var int
+     */
+    public $id;
 
     /**
-     * @var int $id
+     * Включена ли услуга в предложение
+     * Whether the meal service is included in the offer
+     *
+     * @var boolean
      */
-    protected $id = null;
+    public $included;
 
     /**
-     * @var boolean $included
+     * @param int $id
      */
-    protected $included = null;
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return int
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
-     * @param int $id
-     * @return MealPriceDetails
+     * @param boolean $included
      */
-    public function setId($id)
+    public function setIncluded($included)
     {
-      $this->id = $id;
-      return $this;
+        $this->included = $included;
     }
 
     /**
@@ -37,17 +49,6 @@ class MealPriceDetails extends ClientPriceDetails
      */
     public function getIncluded()
     {
-      return $this->included;
+        return $this->included;
     }
-
-    /**
-     * @param boolean $included
-     * @return MealPriceDetails
-     */
-    public function setIncluded($included)
-    {
-      $this->included = $included;
-      return $this;
-    }
-
 }

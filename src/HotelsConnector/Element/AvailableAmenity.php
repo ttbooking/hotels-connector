@@ -5,29 +5,32 @@ namespace Bronevik\HotelsConnector\Element;
 class AvailableAmenity
 {
     /**
-     * Type: xsd:int
+     * Идентификатор дополнительной услуги
+     * The amenity id
      *
      * @var int
      */
-    public $id = null;
+    public $id;
 
     /**
-     * Type: xsd:float
+     * Стоимость доп. услуги
+     * The amenity price
      *
      * @var float
      */
-    public $price = null;
+    public $price;
 
     /**
-     * Type: xsd:boolean
+     * Включена ли услуга во все предложения отеля
+     * Whether the amenity is included in all properties offers
      *
      * @var boolean
      */
-    public $included = null;
+    public $included;
 
     /**
      *
-     * @param int $id
+      @param int $id
      */
     public function setId($id)
     {
@@ -35,7 +38,6 @@ class AvailableAmenity
     }
 
     /**
-     *
      * @return int
      */
     public function getId()
@@ -45,7 +47,7 @@ class AvailableAmenity
 
     /**
      *
-     * @param float $price
+      @param float $price
      */
     public function setPrice($price)
     {
@@ -53,7 +55,6 @@ class AvailableAmenity
     }
 
     /**
-     *
      * @return float
      */
     public function getPrice()
@@ -63,7 +64,7 @@ class AvailableAmenity
 
     /**
      *
-     * @param boolean $included
+      @param boolean $included
      */
     public function setIncluded($included)
     {
@@ -71,7 +72,6 @@ class AvailableAmenity
     }
 
     /**
-     *
      * @return boolean
      */
     public function getIncluded()
@@ -79,4 +79,3 @@ class AvailableAmenity
         return $this->included;
     }
 }
-

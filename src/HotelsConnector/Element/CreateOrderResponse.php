@@ -4,28 +4,23 @@ namespace Bronevik\HotelsConnector\Element;
 
 /**
  * Ответ на запрос по созданию заказа
- *
+ *The response for create the order
  */
 class CreateOrderResponse extends BaseResponse
 {
     /**
-     * Type: tns:Order
-     *
-     * @var \Bronevik\HotelsConnector\Element\Order
+     * @var Order
      */
-    public $order = null;
+    public $order;
 
-    /**
-     *
-     */
     public function __construct()
     {
-        $this->order = new \Bronevik\HotelsConnector\Element\Order;
+        $this->order = new Order();
     }
 
     /**
      *
-     * @param \Bronevik\HotelsConnector\Element\Order $order
+      @param Order $order
      */
     public function setOrder($order)
     {
@@ -34,11 +29,10 @@ class CreateOrderResponse extends BaseResponse
 
     /**
      *
-     * @return \Bronevik\HotelsConnector\Element\Order
+      @return Order
      */
     public function getOrder()
     {
         return $this->order;
     }
 }
-

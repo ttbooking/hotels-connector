@@ -5,43 +5,56 @@ namespace Bronevik\HotelsConnector\Element;
 class ServiceAccommodation extends Service
 {
     /**
-     * Type: xsd:string
+     * Код предложения
+     * The offer code
      *
      * @var string
      */
-    public $offerCode = null;
+    public $offerCode;
 
     /**
-     * Type: xsd:string
+     * ФИО гостей
+     * The name of guests
      *
      * @var string[]
      */
     public $guests = [];
 
     /**
-     * Type: xsd:string
+     * Комментарий к услуге
+     * An information about service
      *
      * @var string
      */
-    public $comment = null;
+    public $comment;
 
     /**
-     * @var float $sellingPrice
+     * Цена продажи
+     * The selling price
+     *
+     * @var float
      */
-    public $sellingPrice = null;
+    public $sellingPrice;
 
     /**
-     * @var int $checkinHour
+     * Желаемое время заезда
+     * The desired date of check-in
+     *
+     * @var int
      */
-    protected $checkinHour = null;
+    public $checkinHour;
 
     /**
-     * @var int $checkoutHour
+     * Желаемое время выезда
+     * The desired date of check-out
+     *
+     * @varint
      */
-    protected $checkoutHour = null;
+    public $checkoutHour;
 
     /**
-     * Type: xsd:int
+     * Список заказанных услуг питания
+     * A list of offer's booked meals
      *
      * @var int[]
      */
@@ -49,7 +62,7 @@ class ServiceAccommodation extends Service
 
     /**
      *
-     * @param string $offerCode
+      @param string $offerCode
      */
     public function setOfferCode($offerCode)
     {
@@ -57,7 +70,6 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     *
      * @return string
      */
     public function getOfferCode()
@@ -66,7 +78,6 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     *
      * @return bool
      */
     public function hasGuests()
@@ -75,7 +86,6 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     *
      * @return string[]
      */
     public function getGuests()
@@ -85,7 +95,7 @@ class ServiceAccommodation extends Service
 
     /**
      *
-     * @param string $guests
+      @param string $guests
      */
     public function addGuests($guests)
     {
@@ -94,7 +104,7 @@ class ServiceAccommodation extends Service
 
     /**
      *
-     * @param string $comment
+      @param string $comment
      */
     public function setComment($comment)
     {
@@ -102,7 +112,6 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     *
      * @return string
      */
     public function getComment()
@@ -111,12 +120,11 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     *
-     * @return bool
+     *@param float $sellingPrice
      */
-    public function hasMeals()
+    public function setSellingPrice($sellingPrice)
     {
-        return count($this->meals) > 0;
+        $this->sellingPrice = $sellingPrice;
     }
 
     /**
@@ -128,53 +136,46 @@ class ServiceAccommodation extends Service
     }
 
     /**
-     * @param float $sellingPrice
-     * @return ServiceAccommodation
+     * @param int $checkinHour
      */
-    public function setSellingPrice($sellingPrice)
+    public function setCheckinHour($checkinHour)
     {
-        $this->sellingPrice = $sellingPrice;
-        return $this;
+        $this->checkinHour = $checkinHour;
     }
 
     /**
      * @return int
      */
-    public function getCheckInHour()
+    public function getCheckinHour()
     {
         return $this->checkinHour;
     }
 
     /**
-     * @param int $checkInHour
-     * @return ServiceAccommodation
+     * @param int $checkoutHour
      */
-    public function setCheckInHour($checkInHour)
+    public function setCheckoutHour($checkoutHour)
     {
-        $this->checkinHour = $checkInHour;
-        return $this;
+        $this->checkoutHour = $checkoutHour;
     }
 
     /**
      * @return int
      */
-    public function getCheckOutHour()
+    public function getCheckoutHour()
     {
         return $this->checkoutHour;
     }
 
     /**
-     * @param int $checkOutHour
-     * @return ServiceAccommodation
+     * @return bool
      */
-    public function setCheckOutHour($checkOutHour)
+    public function hasMeals()
     {
-        $this->checkoutHour = $checkOutHour;
-        return $this;
+        return count($this->meals) > 0;
     }
 
     /**
-     *
      * @return int[]
      */
     public function getMeals()
@@ -184,11 +185,10 @@ class ServiceAccommodation extends Service
 
     /**
      *
-     * @param int $meals
+      @param int $meals
      */
     public function addMeals($meals)
     {
         $this->meals[] = $meals;
     }
 }
-

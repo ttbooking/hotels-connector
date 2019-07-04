@@ -6,31 +6,31 @@ class BreakfastInfo
 {
     /**
      * Название завтрака
-     * Type: xsd:string
+     * The breakfast name
      *
      * @var string
      */
-    public $name = null;
+    public $name;
 
     /**
      * Стоимость
-     * Type: xsd:string
+     * The breakfast price
      *
-     * @var string
+     * @var float
      */
-    public $price = null;
+    public $price;
 
     /**
      * Включен в стоимость проживания
-     * Type: xsd:boolean
+     * True if breakfast included in offer price
      *
      * @var boolean
      */
-    public $included = null;
+    public $included;
 
     /**
      *
-     * @param string $name
+      @param string $name
      */
     public function setName($name)
     {
@@ -38,7 +38,6 @@ class BreakfastInfo
     }
 
     /**
-     *
      * @return string
      */
     public function getName()
@@ -48,7 +47,7 @@ class BreakfastInfo
 
     /**
      *
-     * @param string $price
+      @param float $price
      */
     public function setPrice($price)
     {
@@ -57,7 +56,7 @@ class BreakfastInfo
 
     /**
      *
-     * @return string
+      @return float
      */
     public function getPrice()
     {
@@ -66,7 +65,7 @@ class BreakfastInfo
 
     /**
      *
-     * @param boolean $included
+      @param boolean $included
      */
     public function setIncluded($included)
     {
@@ -74,7 +73,6 @@ class BreakfastInfo
     }
 
     /**
-     *
      * @return boolean
      */
     public function getIncluded()
@@ -82,4 +80,3 @@ class BreakfastInfo
         return $this->included;
     }
 }
-

@@ -5,31 +5,38 @@ namespace Bronevik\HotelsConnector\Element;
 class Contract
 {
     /**
-     * Внутренний идентификатор договора
-     * Type: xsd:int
+     * Идентификатор договора
+     * The contract id
      *
      * @var int
      */
-    public $id = null;
+    public $id;
 
     /**
      * Номер договора
-     * Type: xsd:string
+     * The contract reference number
      *
      * @var string
      */
-    public $number = null;
+    public $number;
 
     /**
      * Дата начала действия договора
-     * Type: xsd:date
+     * The contract start date
      *
-     * @var date
+     * @var string
      */
-    public $beginsAt = null;
+    public $beginsAt;
 
     /**
+     *Юридическое лицо
+     * Legal entity
      *
+     * @var string
+     */
+    public $legalEntity;
+
+    /**
      * @param int $id
      */
     public function setId($id)
@@ -38,7 +45,6 @@ class Contract
     }
 
     /**
-     *
      * @return int
      */
     public function getId()
@@ -48,7 +54,7 @@ class Contract
 
     /**
      *
-     * @param string $number
+      @param string $number
      */
     public function setNumber($number)
     {
@@ -56,7 +62,6 @@ class Contract
     }
 
     /**
-     *
      * @return string
      */
     public function getNumber()
@@ -66,7 +71,7 @@ class Contract
 
     /**
      *
-     * @param date $beginsAt
+      @param string $beginsAt
      */
     public function setBeginsAt($beginsAt)
     {
@@ -75,11 +80,26 @@ class Contract
 
     /**
      *
-     * @return date
+      @return string
      */
     public function getBeginsAt()
     {
         return $this->beginsAt;
     }
-}
 
+    /**
+     * @param string $legalEntity
+     */
+    public function setLegalEntity($legalEntity)
+    {
+        $this->legalEntity = $legalEntity;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLegalEntity()
+    {
+        return $this->legalEntity;
+    }
+}

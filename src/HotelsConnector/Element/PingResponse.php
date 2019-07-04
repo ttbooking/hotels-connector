@@ -5,15 +5,13 @@ namespace Bronevik\HotelsConnector\Element;
 class PingResponse extends BaseResponse
 {
     /**
-     * Type: xsd:string
-     *
      * @var string
      */
-    public $data = null;
+    public $data;
 
     /**
      *
-     * @param string $data
+      @param string $data
      */
     public function setData($data)
     {
@@ -21,7 +19,6 @@ class PingResponse extends BaseResponse
     }
 
     /**
-     *
      * @return string
      */
     public function getData()
@@ -29,4 +26,3 @@ class PingResponse extends BaseResponse
         return $this->data;
     }
 }
-

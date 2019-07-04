@@ -4,46 +4,52 @@ namespace Bronevik\HotelsConnector\Element;
 
 class Tax
 {
+    /**
+     * Тип сбора
+     * The type of fee
+     *
+     * @var string
+     */
+    public $type;
 
     /**
-     * @var string $type
+     * Величина сбора
+     * The amount of fee
+     *
+     * @var float
      */
-    public $type = null;
+    public $amount;
 
     /**
-     * @var float $amount
+     * Валюта оплаты
+     * The payment fee
+     *
+     * @var string
      */
-    public $amount = null;
+    public $currency;
 
     /**
-     * @var string $currency
+     * Включен ли сбор в стоимость предложения
+     * Is the fee included in the price of offer
+     *
+     * @var boolean
      */
-    public $currency = null;
+    public $included;
 
     /**
-     * @var boolean $included
+     * Комментарии
+     * An information about taxes
+     *
+     * @var string
      */
-    public $included = null;
-
-    /**
-     * @var string $comment
-     */
-    public $comment = null;
+    public $comment;
 
     /**
      * @param string $type
-     * @param float $amount
-     * @param string $currency
-     * @param boolean $included
-     * @param string $comment
      */
-    public function __construct($type, $amount, $currency, $included, $comment)
+    public function setType($type)
     {
         $this->type = $type;
-        $this->amount = $amount;
-        $this->currency = $currency;
-        $this->included = $included;
-        $this->comment = $comment;
     }
 
     /**
@@ -55,13 +61,11 @@ class Tax
     }
 
     /**
-     * @param string $type
-     * @return Tax
+     * @param float $amount
      */
-    public function setType($type)
+    public function setAmount($amount)
     {
-        $this->type = $type;
-        return $this;
+        $this->amount = $amount;
     }
 
     /**
@@ -73,13 +77,11 @@ class Tax
     }
 
     /**
-     * @param float $amount
-     * @return Tax
+     * @param string $currency
      */
-    public function setAmount($amount)
+    public function setCurrency($currency)
     {
-        $this->amount = $amount;
-        return $this;
+        $this->currency = $currency;
     }
 
     /**
@@ -91,13 +93,11 @@ class Tax
     }
 
     /**
-     * @param string $currency
-     * @return Tax
+     * @param boolean $included
      */
-    public function setCurrency($currency)
+    public function setIncluded($included)
     {
-        $this->currency = $currency;
-        return $this;
+        $this->included = $included;
     }
 
     /**
@@ -109,13 +109,11 @@ class Tax
     }
 
     /**
-     * @param boolean $included
-     * @return Tax
+     * @param string $comment
      */
-    public function setIncluded($included)
+    public function setComment($comment)
     {
-        $this->included = $included;
-        return $this;
+        $this->comment = $comment;
     }
 
     /**
@@ -125,15 +123,4 @@ class Tax
     {
         return $this->comment;
     }
-
-    /**
-     * @param string $comment
-     * @return Tax
-     */
-    public function setComment($comment)
-    {
-        $this->comment = $comment;
-        return $this;
-    }
-
 }
